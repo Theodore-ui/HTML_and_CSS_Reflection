@@ -1,12 +1,25 @@
+
+@mixin simplelists {
+    list-style-type: none;
+}
+
 * {
     box-sizing: border-box;   
 }
 
+footer {
+    background-color: #333645;
+    color: #fff;
+    padding: 47px 0 43px;
+    ul {
+        @include simplelists;
+    }
+}
 
 .services_about {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around;     
 }
 
 .offices {
