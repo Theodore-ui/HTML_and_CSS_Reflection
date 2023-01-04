@@ -1,32 +1,46 @@
 
-@mixin simplelists {
-    list-style-type: none;
-}
-
 * {
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
 footer {
     background-color: #333645;
     color: #fff;
     padding: 47px 0 43px;
-    ul {
-        @include simplelists;
-    }
+    font-family: Poppins,sans-serif;
+    margin-right: auto;
+    
 }
-
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h4 {
+    font-weight: normal;
+}
 .services_about {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;     
+    justify-content: space-around;
+    
 }
-
 .offices {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}  
+    justify-content: space-around;    
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 
 
  
