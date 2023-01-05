@@ -9,7 +9,73 @@ body {
     font-family: Poppins,sans-serif;
     font-size: 1rem;
     letter-spacing: .4px;
+    line-height: 1.42857143;
 }
+
+// intro
+
+.intro {
+    background-color: #333645;
+    color: #fff;
+    padding: 50px 15px 50px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.intro h2 { 
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+.intro p a, .intro .btn a {
+    text-decoration: none;
+    color: #fff;
+}
+.intro p a:hover {
+    text-decoration: underline;
+}
+.intro .btn {
+    height: auto;
+    line-height: 35px;
+    display: inline-block;  
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+.intro .read_more {
+    background-color: #272936;
+    margin-bottom: 50px;
+}
+.intro .read_more:hover {
+    background-color: #121318;
+}
+.client_quote {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.intro .google {
+    background-color: #4387f6;
+    margin-top: 20px;
+    margin-right: 8px;
+}
+.intro .google:hover {
+    background-color: #166af4;
+}
+.intro .trustpilot {
+    background-color: #00b67b;
+    margin-top: 20px;
+}
+.intro .trustpilot:hover {
+    background-color: #166af4;
+}
+
+
+// articles 
+
+
+
 
 //Email Newsletter Sign-Up
 
@@ -27,6 +93,10 @@ form h2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+.required:after {
+    content: " *";
+    color: #d24d57;
 }
 form label {
     font-weight: 600;
@@ -51,13 +121,12 @@ form a {
     width: 32px;
     position: relative;
     float: left;
-    margin-right: 20px;      
-}
-.checkbox::after {
-    clear: both;
-    display: table;
+    overflow: auto;
+    margin-right: 20px;     
 }
 .checkbox_note {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 15px;
 }
 .btn {
