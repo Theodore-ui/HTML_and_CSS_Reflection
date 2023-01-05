@@ -14,18 +14,27 @@
 
         <main>
         <form action="index.html" method="post">
+
+            
             
             <h2>Email Newsletter Sign-Up</h2>
+            <div class="name_email">
+                <label for="user_name">Your Name</label>
+                <input class="form-group" type="text" id="name" name="user_name">
 
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="user_name">
+                <label for="email">Your Email</label>
+                <input class="form-group" type="email" id="email" name="user_email">
+            </div>
+            <div class="checkbox_note">
+                <input class="checkbox" type="checkbox" id="marketing" value="conformation_marketing" 
+                name="user_interests"><label class="side_label" for="marketing">	Please tick this box 
+                if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
+            </div>
+            
+            <button class="btn" type="submit">Subscribe</button>
 
-            <lable for="email">Your Email</lable>
-            <input type="email" id="email" name="user_email">
-
-            <input type="checkbox" id="marketing" value="conformation_marketing" 
-            name="user_interests"><label class="light" for="marketing">	Please tick this box 
-            if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy<a> for more information on how we keep your data safe.</label> 
+            
+            
 
         </form>    
         </main>
