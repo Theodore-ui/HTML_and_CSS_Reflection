@@ -11,6 +11,64 @@ body {
     letter-spacing: .4px;
     line-height: 1.42857143;
 }
+//header
+
+header {
+    padding: 20px 0;
+}
+.container {
+    padding: 0 15px;    
+}
+.net_logo {
+    max-width: 100%;
+}
+.burger {
+    background-color: #333645;
+    padding: 15px; 
+    border-radius: 3px;
+    margin-left: 15px;
+}
+.burger:hover {
+    background-color: #22242e;
+}
+.phone:hover {
+    border-bottom: 3px solid black;
+}
+header .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone_burger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+}
+header input {
+    background-color: rgba(0,0,0,.1);
+    outline: 1px solid hsla(0,0%,100%,.2);
+    border: 2px solid rgba(0,0,0,.1);
+    transition: none;
+    height: 48px;
+    width: 100%;
+    padding: 5px 40px 5px 15px;
+    margin-top: 20px;
+    display: inline-block;
+}   
+.search_search_icon {
+    position: relative;    
+}
+.search_icon {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+
+}
+
 // cyber security
 .cyber_security {
     position: relative;
