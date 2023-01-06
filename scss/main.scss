@@ -11,6 +11,56 @@ body {
     letter-spacing: .4px;
     line-height: 1.42857143;
 }
+// cyber security
+.cyber_security {
+    position: relative;
+    text-align: center;
+}
+picture img {
+    object-fit: cover;
+    height: 550px;
+    width: 100%;
+    filter: brightness(50%);
+       
+}
+.img_overlay {
+    display: block;
+    position: absolute;
+    text-align: center;
+    color:#fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.img_overlay h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0 0 1.25rem;
+    font-weight: 600;
+}
+.img_overlay p {
+    margin-bottom: .375rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+.img_overlay a {
+    height: auto;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;;
+    padding: 5px 20px;
+    border-radius: 3px;
+    background-color: #f62459;
+    line-height: 35px;
+    display: inline-block;
+    margin-top: 31px; 
+    margin-bottom: 18px;   
+}
+.img_overlay a:hover {
+    background-color: #e80a42;
+}
 
 // intro
 
@@ -25,8 +75,9 @@ body {
 .intro h2 { 
     font-weight: 600;
     font-size: 2.25rem;
+    margin-top: 0;
 }
-.intro p a, .intro .btn a {
+.intro p a {
     text-decoration: none;
     color: #fff;
 }
@@ -42,6 +93,12 @@ body {
     text-align: center;
     padding: 10px 30px;
     border-radius: 3px;
+    
+}
+.intro .btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
 }
 .intro .read_more {
     background-color: #272936;
@@ -68,10 +125,18 @@ body {
     margin-top: 20px;
 }
 .intro .trustpilot:hover {
-    background-color: #166af4;
+    background-color: #009b69;
 }
+.client_quote_author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a3a8ac;
+} 
 
-
+.arrow {
+    vertical-align: middle;
+    margin: 0 -4px 0 12px;   
+}
 // articles 
 
 
@@ -122,7 +187,8 @@ form a {
     position: relative;
     float: left;
     overflow: auto;
-    margin-right: 20px;     
+    margin-right: 20px;
+    background-color: transparent;    
 }
 .checkbox_note {
     display: flex;
