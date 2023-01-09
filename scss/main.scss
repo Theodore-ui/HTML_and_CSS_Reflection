@@ -87,40 +87,42 @@ header input {
     padding: 30px;
     display: block;
     max-width: 720px;
-    span {
-        margin-left: auto;
-        margin-right: auto;
-        img {
-            margin-bottom: 17px;
-        }
-        .h2 {
-            font-size: 1.3rem;
-            margin-bottom: 21px;
-        }
-        .p {
-            margin-bottom: 13px;
-        }
-        .btn_software {
-            text-decoration: none;
-            height: 97.778px;
-            padding: 5px 15px;
-            background-color: #d24d57;
-            border-radius: 3px;
-            color: #fff;
-        }
-    }   
+    &:hover {
+        background-color: #ce4125;
+        color: #fff;
+        border-color: transparent;
+        top: -10px;
+        transition: .5s ease;
+    }
+}
+.our_services_card img {
+    margin-bottom: 17px;
+}
+.our_services_card .h2 {
+    font-size: 1.3rem;
+    margin-bottom: 21px;
+}
+.our_services_card .p {
+    margin-bottom: 13px;
+}
+.btn_software {
+    text-decoration: none;
+    height: 97.778px;
+    padding: 5px 15px;
+    background-color: #d24d57;
+    border-radius: 3px;
+    color: #fff;
 }
 .view_all {
+    align-self: center;
     text-decoration: none;
+    font-size: 1.625rem;
     font-weight: 600;
     color: #333645;
-    margin: 30px 0 30px 0;
+    margin: 30px auto -70px;
     &:hover {
         text-decoration: 3px underline;
     }
-}
-.view_all_container {
-    text-align: center;
 }
 // cyber security
 .cyber_security {
@@ -172,7 +174,13 @@ picture img {
 .img_overlay a:hover {
     background-color: #e80a42;
 }
-
+//
+.section {
+ padding: 50px 0;    
+}
+.scroll {
+    padding: 0 15px;
+}
 // intro
 
 .intro {
@@ -248,10 +256,65 @@ picture img {
     vertical-align: middle;
     margin: 0 -4px 0 12px;   
 }
-// articles 
-
-
-
+// latest news
+.latest_news_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.latest_news_card {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0 0 3px 3px;
+    margin-top: 30px;
+    flex-grow: 720px;
+}
+.latest_news_card img {
+    object-fit: cover;
+    width: 100%;
+}
+.img_tool_tip {
+    position: relative; 
+    display: block;
+}
+.img_tool_tip .tool_tip {
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    display: block;
+    font-weight: 600;
+    padding: 0 10px;
+    
+}
+.latest_news_card_bottom {
+    display: block;
+    padding: 30px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.latest_news_card_bottom h3 {
+    margin: 0 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.latest_news_card_bottom p {
+    margin: 0 0 25px;
+    line-height: 1.375rem;
+    font-size: .8125rem;
+    color: #666;
+}
+.latest_news_card_bottom .btn_staff_awards {
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 15px;
+    background-color: #d24d57;
+    border-radius: 3px;
+    color: #fff;    
+}
 
 //Email Newsletter Sign-Up
 
