@@ -12,14 +12,56 @@ body {
     font-size: 1rem;
     letter-spacing: .4px;
     line-height: 1.42857143;
+    color: #333645; 
+}
+.section {
+    padding: 50px 0 0 0;    
+   }
+.container {
+    padding: 0 15px;    
+}
+.section_container {
+    padding: 50px 15px;
+}
+.btn {
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 15px;
+    border-radius: 3px;
+    color: #fff;    
+}
+.btn_medium {
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 20px;
+    border-radius: 3px;
+    color: #fff;
+    overflow: auto;    
+}
+.btn_big {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 25px 30px;
+    border-radius: 3px;
+    color: #fff;    
+}
+.view_all {   
+    text-decoration: none;
+    font-size: 1.625rem;
+    font-weight: 600;
+    color: #333645;
+    &:hover {
+        text-decoration: 3px underline;
+    }
 }
 //header
 
 header {
     padding: 20px 0;
-}
-.container {
-    padding: 0 15px;    
 }
 .net_logo {
     max-width: 100%;
@@ -71,59 +113,23 @@ header input {
     font-size: 20px;
 
 }
-
-// Our services 
-.our_services_card_container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    color: #333645;    
-}
-.our_services_card {
-    margin-top: 30px;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    padding: 30px;
-    display: block;
-    max-width: 720px;
-    &:hover {
-        background-color: #ce4125;
-        color: #fff;
-        border-color: transparent;
-        top: -10px;
-        transition: .5s ease;
+@media screen and (min-width:688px) {
+    .phone {
+        display: none;
     }
-}
-.our_services_card img {
-    margin-bottom: 17px;
-}
-.our_services_card .h2 {
-    font-size: 1.3rem;
-    margin-bottom: 21px;
-}
-.our_services_card .p {
-    margin-bottom: 13px;
-}
-.btn_software {
-    text-decoration: none;
-    height: 97.778px;
-    padding: 5px 15px;
-    background-color: #d24d57;
-    border-radius: 3px;
-    color: #fff;
-}
-.view_all {
-    align-self: center;
-    text-decoration: none;
-    font-size: 1.625rem;
-    font-weight: 600;
-    color: #333645;
-    margin: 30px auto -70px;
-    &:hover {
-        text-decoration: 3px underline;
+    .burger {
+        -ms-flex-order: -1;
     }
-}
+    .header input {
+        margin-top: 0;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }    
+}  
 // cyber security
 .cyber_security {
     position: relative;
@@ -133,8 +139,7 @@ picture img {
     object-fit: cover;
     height: 550px;
     width: 100%;
-    filter: brightness(50%);
-       
+    filter: brightness(50%);       
 }
 .img_overlay {
     display: block;
@@ -145,39 +150,209 @@ picture img {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.img_overlay h2 {
+.cyber_security .h1 {
+    font-weight: 600;
     font-size: 2.5rem;
     line-height: 3rem;
     margin: 0 0 1.25rem;
-    font-weight: 600;
 }
 .img_overlay p {
-    margin-bottom: .375rem;
+    margin-bottom: 25px;
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-weight: 600;
 }
-.img_overlay a {
-    height: auto;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.25rem;;
-    padding: 5px 20px;
-    border-radius: 3px;
+.btn_find_out_more {
+    font-size: 1.25rem;
     background-color: #f62459;
-    line-height: 35px;
-    display: inline-block;
-    margin-top: 31px; 
-    margin-bottom: 18px;   
+    margin-top: 60px; 
+    margin-bottom: 18px;
+    &:hover {
+        background-color: #e80a42;
+    }   
 }
-.img_overlay a:hover {
-    background-color: #e80a42;
+// Our services
+.our_services .h1 {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 2.7rem;
+    margin-bottom: 15px;    
+}
+.our_services_card_container {
+    color: #333645; 
+    display: block;       
+}
+.our_services_card {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    display: block;
+    max-width: 658px;
+    position: relative;
+}
+.our_services_card_software:hover {
+    background-color: #67809f;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_software {
+        color: #67809f;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_suport:hover {
+    background-color: #4183d7;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_suport {
+        color: #4183d7;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_marketing:hover {
+    background-color: #2ecc71;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_marketing {
+        color: #2ecc71;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_telecoms:hover {
+    background-color: #d64541;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_telecoms {
+        color: #d64541;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_design:hover {
+    background-color: #926fb1;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_design {
+        color: #926fb1;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_security:hover {
+    background-color: #f62459;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_security {
+        color: #f62459;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_training:hover {
+    background-color: #ce4125;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_training {
+        color: #ce4125;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card img {
+    margin-bottom: 17px;
+}
+.our_services_card .h2 {
+    font-size: 1.3rem;
+    margin-bottom: 21px;
+    font-weight: 400;
+}
+.our_services_card .p {
+    margin-bottom: 20px;
+}
+.btn_software {
+    background-color: #67809f;
+}
+.btn_suport {
+    background-color: #4183d7;    
+}
+.btn_marketing {
+    background-color: #2ecc71;   
+}
+.btn_telecoms {
+    background-color: #d64541;    
+}
+.btn_design {
+    background-color: #926fb1;    
+}
+.btn_security {
+    background-color: #f62459;    
+}
+.btn_training {
+    background-color: #ce4125;    
+}
+
+.view_all_container {
+    text-align: center;
+    margin-top: 30px;
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .our_services_first_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_first_rows .our_services_card {
+        width: 284px;
+        margin: 30px 15px 0 15px;    
+    }
+}
+@media screen and (min-width:992px) and (max-width:1260px){
+    .our_services_second_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_second_rows .our_services_card {
+        width: 284px;
+        margin: 30px 15px 0 15px;    
+    }
+    .our_services_first_rows .our_services_card {
+        width: 393px;
+        margin: 30px 15px 0 15px;    
+    }
+}
+@media screen and (min-width:1260px) {
+    .our_services_third_rows {
+        .our_services_third_rows {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .our_services_third_rows .our_services_card {
+            width: 208px;
+            margin: 30px 15px 0 15px;
+        }
+    }    
 }
 //
-.section {
- padding: 50px 0;    
-}
 .scroll {
     padding: 0 15px;
 }
@@ -186,16 +361,19 @@ picture img {
 .intro {
     background-color: #333645;
     color: #fff;
-    padding: 50px 15px 50px 15px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 .intro h2 { 
-    font-weight: 600;
     font-size: 2.25rem;
+    font-weight: 400;
     margin-top: 0;
 }
+.intro p {
+    line-height: 1.875rem;
+    margin-bottom: 25px; 
+} 
 .intro p a {
     text-decoration: none;
     color: #fff;
@@ -203,48 +381,47 @@ picture img {
 .intro p a:hover {
     text-decoration: underline;
 }
-.intro .btn {
-    height: auto;
-    line-height: 35px;
-    display: inline-block;  
-    margin-bottom: 0;
-    font-weight: 400;
-    text-align: center;
-    padding: 10px 30px;
-    border-radius: 3px;
-    
+.welcome_to_netmatters_btns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-.intro .btn a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
+.btn_welcome_to_netmatters_container {
+    margin-bottom: 90px;
 }
-.intro .read_more {
+.btn_welcome_to_netmatters {
     background-color: #272936;
     margin-bottom: 50px;
-}
-.intro .read_more:hover {
-    background-color: #121318;
+    &:hover {
+        background-color: #121318;
+    }
 }
 .client_quote {
     font-weight: 600;
     font-size: 1.3rem;
     font-style: italic;
 }
-.intro .google {
-    background-color: #4387f6;
+.reviews_btns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.btn_google_container {
     margin-top: 20px;
+}
+.btn_google {
+    background-color: #4387f6;
     margin-right: 8px;
+    &:hover {
+        background-color: #166af4;
+    }
 }
-.intro .google:hover {
-    background-color: #166af4;
-}
-.intro .trustpilot {
+.intro .btn_trustpilot {
     background-color: #00b67b;
     margin-top: 20px;
-}
-.intro .trustpilot:hover {
-    background-color: #009b69;
+    &:hover {
+        background-color: #009b69;
+    }
 }
 .client_quote_author {
     font-size: 1.1rem;
@@ -257,17 +434,22 @@ picture img {
     margin: 0 -4px 0 12px;   
 }
 // latest news
-.latest_news_card_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
+.latest_news .h1 {
+    font-size: 2.25rem;
+    font-weight: 600;    
 }
+
 .latest_news_card {
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 0 0 3px 3px;
     margin-top: 30px;
+    max-width: 658px;
+}
+
+.latest_news_card_bottom {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 0 0 3px 3px;
     flex-grow: 720px;
 }
 .latest_news_card img {
@@ -279,13 +461,27 @@ picture img {
     display: block;
 }
 .img_tool_tip .tool_tip {
+    color: #fff;
     text-decoration: none;
     position: absolute;
     top: 10px;
+    right: 0;
     display: block;
     font-weight: 600;
     padding: 0 10px;
-    
+    font-size: .75rem;
+    &:hover {
+        text-decoration: underline;
+    }   
+}
+.tool_tip_matt_hurst {
+    background-color: #4183d7;
+}
+.tool_tip_staff_awards {
+    background-color: #926fb1;
+}
+.tool_tip_girls_day {
+    background-color: #2ecc71;
 }
 .latest_news_card_bottom {
     display: block;
@@ -293,12 +489,21 @@ picture img {
     font-size: 1rem;
     line-height: 1.5rem;
 }
-.latest_news_card_bottom h3 {
+.latest_news_card_bottom .h3 {
     margin: 0 0 15px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5rem;
+}
+.matt_hurst .h3 {
+    color: #4183d7; 
+}
+.staff_awards .h3 {
+    color: #926fb1; 
+}
+.girls_day .h3 {
+    color: #2ecc71; 
 }
 .latest_news_card_bottom p {
     margin: 0 0 25px;
@@ -306,25 +511,49 @@ picture img {
     font-size: .8125rem;
     color: #666;
 }
+.latest_news_card_bottom .btn_matt_hurst {  
+    background-color: #4183d7;
+}
 .latest_news_card_bottom .btn_staff_awards {
-    text-decoration: none;
-    font-weight: 400;
-    line-height: 35px;
-    padding: 15px;
-    background-color: #d24d57;
-    border-radius: 3px;
-    color: #fff;    
+    background-color: #926fb1;     
+}
+.latest_news_card_bottom .btn_girls_day {  
+    background-color: #2ecc71;
+}
+.icon_m_data {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    display: inline-block;
+}
+.icon_m {  
+    max-width: 47px;
+}
+.text {
+    padding-left: 20px;
+    font-size: .875rem;
+    display: inline-block;
+}
+@media screen and (min-width:688px) {
+    .girls_day {
+        display: none;
+    }
+    .latest_news_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 //Email Newsletter Sign-Up
 
 form {
     color:#333645;
-    background-color: #DDDDDD;
-    padding: 50px 15px 50px 15px;   
+    background-color: #DDDDDD;   
 }
 form h2 {
     margin-top: 0;
+    margin-bottom: 13px;
     font-weight: normal;
     font-size: 32px;
 }
@@ -349,7 +578,7 @@ form input {
     width: 100%;
     padding: 5px 15px; 
 }
-form a {
+form label a {
     color: #333645;
     text-decoration: underline;
 }
@@ -369,14 +598,12 @@ form a {
     flex-direction: row;
     margin-bottom: 15px;
 }
-.btn {
-    color: #fff;
-    background-color: #333645;
-    border-color: #333645;
-    border-radius: 3px;
+.btn_submit {
     padding: 5px 15px;
-    position: relative;
-    
+    height: auto;
+    border: none;
+    background-color: #333645;
+    cursor: pointer;
 } 
 //footer styling
 
