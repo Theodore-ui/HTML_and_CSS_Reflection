@@ -42,7 +42,10 @@
                 </div>
             </div>
             <div class="our_services section container">
-                <h2 class="h1"><strong>Our Services</strong></h2>
+                <div class="bar">
+                    <h2 class="h1"><strong>Our Services</strong></h2>
+                    <a class="view_all_2" href="#">View All<img class="arrow" src="icons/317-arrow-right2.png"></a>
+                </div>
                 <div class="our_services_card_container">
                     <div class="our_services_second_rows">
                         <div class="our_services_card our_services_card_software">
@@ -165,15 +168,12 @@
                 <div class="intro section_container">
                     <div class="welcome">
                         <h2 class="h1"><strong>Welcome To Netmatters</strong></h2>
-
                         <p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital</a>
                         Marketing company based in the East of England with offices in <a href="#">Cambridge</a>, 
                         <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.</strong></p>
-
                         <p>We aren't tied into contracts with third-party providers, so you know 
                         that our recommendations for your business are based purely with one benefit 
                         in mind: to help improve your business with the most appropriate solutions.</p>
-
                         <p>We pride ourselves on being an ethical business and have a unique business 
                         offering and cost model that ensures you get the most from our relationship in 
                         an upfront manner.</p>
@@ -185,6 +185,7 @@
                                 <a class="btn_big btn_welcome_to_netmatters btn_our_culture" href="#">OUR CULTURE<img class="arrow" src="icons/317-arrow-right2.png"></a>
                             </div>
                         </div>
+                    </div>
                     <div class="clients">
                         <h2 class="h1"><strong>What Our Clients Think</strong></h2>
 
@@ -199,19 +200,22 @@
 
                         <p class="client_quote_author">Eleanor Bishop, Head of Marketing
                         - <a href="#">Ashcroft Partnership LLP</a></p>
-                        
+                        <div class="review_btns">
                             <div class="btn_google_container">
                                 <a class="btn_big btn_google"href="#">GOOGLE REVIEWS<img class="arrow" src="icons/317-arrow-right2.png"></a>        
                             </div>
                             <div class="btn_trustpilot_container">
                                 <a class="btn_big btn_trustpilot" href="#">TRUSTPILOT REVIEWS<img class="arrow" src="icons/317-arrow-right2.png"></a>    
                             </div>
-                        
+                        </div> 
                     </div>
                 </div>
             </div>
             <div class="latest_news container">
-                <h2 class="h1"><strong>Latest News</strong></h2>
+                <div class="bar">
+                    <h2 class="h1"><strong>Latest News</strong></h2>
+                    <a class="view_all_2" href="#">View All<img class="arrow" src="icons/317-arrow-right2.png"></a>
+                </div>
                 <div class="latest_news_card_container">
                     <div class="latest_news_card matt_hurst">
                         <div class="img_tool_tip">
@@ -321,89 +325,95 @@
             </div>
             <div class="section">
                 <form class="section_container" action="index.html" method="post">
-    
-                    <h2>Email Newsletter Sign-Up</h2>
-                    <div class="name_email">
-                        <label class="required" for="user_name">Your Name</label>
-                        <input class="form-group" type="text" id="name" name="user_name">
-
-                        <label class="required" for="email">Your Email</label>
-                        <input class="form-group" type="email" id="email" name="user_email">
-                    </div>
-                    <div class="checkbox_note">
-                        <input class="checkbox" type="checkbox" id="marketing" value="conformation_marketing" 
-                        name="user_interests"><label class="side_label" for="marketing">Please tick this box 
-                        if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> 
-                        for more information on how we keep your data safe.</label>
-                    </div>
-                    <div>
-                        <button class="btn btn_submit" type="submit">SUBSCRIBE</button>
+                    <div class="form_container">
+                        <h2>Email Newsletter Sign-Up</h2>
+                        <div class="name_email_container">
+                            <div class="name_container">
+                                <label class="required" for="user_name">Your Name</label>
+                                <input class="form-group" type="text" id="name" name="user_name">
+                            </div>
+                            <div class="email_container">
+                                <label class="required" for="email">Your Email</label>
+                                <input class="form-group" type="email" id="email" name="user_email">
+                            </div>
+                        </div>
+                        <div class="checkbox_note">
+                            <input class="checkbox" type="checkbox" id="marketing" value="conformation_marketing" 
+                            name="user_interests"><label class="side_label" for="marketing">Please tick this box 
+                            if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> 
+                            for more information on how we keep your data safe.</label>
+                        </div>
+                        <div>
+                            <button class="btn btn_submit" type="submit">SUBSCRIBE</button>
+                        </div>
                     </div>
                 </form>
             </div>    
         </main>
 
         <footer>
-            <div class="services_about">
-                <div class="footer_card about" >
-                    <h4>ABOUT NETMATTERS</h5>
-                    <ul>
-                        <li><a href="#" target="_self">News</a></li>
-                        <li><a href="#" target="_self">Our Careers</a></li>
-                        <li><a href="#" target="_self">Our Team</a></li>
-                        <li><a href="#" target="_self">Privacy Policy</a></li>
-                        <li><a href="#" target="_self">Cookie Policy</a></li>
-                        <li><a href="#" target="_self">Terms & Conditions</a></li>
-                        <li><a href="#" target="_self">Environmental Policy</a></li>
-                        <li><a href="#" target="_self">Contact Us</a></li>
-                    </ul>
+            <div class="footer_card_container">
+                <div class="services_about">
+                    <div class="footer_card about" >
+                        <h4>ABOUT NETMATTERS</h5>
+                        <ul>
+                            <li><a href="#" target="_self">News</a></li>
+                            <li><a href="#" target="_self">Our Careers</a></li>
+                            <li><a href="#" target="_self">Our Team</a></li>
+                            <li><a href="#" target="_self">Privacy Policy</a></li>
+                            <li><a href="#" target="_self">Cookie Policy</a></li>
+                            <li><a href="#" target="_self">Terms & Conditions</a></li>
+                            <li><a href="#" target="_self">Environmental Policy</a></li>
+                            <li><a href="#" target="_self">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_card services">
+                        <h4>OUR SERVICES</h4>
+                        <ul>
+                            <li><a href="#" target="_self">Bespoke Software</a></li>
+                            <li><a href="#" target="_self">IT Support</a></li>
+                            <li><a href="#" target="_self">Digital Marketing</a></li>
+                            <li><a href="#" target="_self">Telecoms Services</a></li>
+                            <li><a href="#" target="_self">Web Design</a></li>
+                            <li><a href="#" target="_self">Cyber Security</a></li>
+                            <li><a href="#" target="_self">Developer Training</a>></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer_card services">
-                    <h4>OUR SERVICES</h4>
-                    <ul>
-                        <li><a href="#" target="_self">Bespoke Software</a></li>
-                        <li><a href="#" target="_self">IT Support</a></li>
-                        <li><a href="#" target="_self">Digital Marketing</a></li>
-                        <li><a href="#" target="_self">Telecoms Services</a></li>
-                        <li><a href="#" target="_self">Web Design</a></li>
-                        <li><a href="#" target="_self">Cyber Security</a></li>
-                        <li><a href="#" target="_self">Developer Training</a>></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="offices">
-                <div class="footer_card cam_off">
-                    <h4>CAMBRIDGE OFFICE</h4>
-                    <ul>
-                        <li>Unit 1.31,</li>
-                        <li>St John's Innovation Centre,</li>
-                        <li>Cowley Road, Miltion
-                        <li>Cambridge,</li>
-                        <li>CB4 0WS</li><br>
-                        <li>Tel: <a href="#" target="_self">01223 37 57 72</a></li>
-                    </ul>
-                </div>
-                <div class="footer_card wym_off">
-                    <h4>WYMONDHAM OFFICE</h4>
-                    <ul>
-                        <li>Unit 15,</li>
-                        <li>Penfold Drive,</li>
-                        <li>Gateway 11 Business Park,</li>
-                        <li>Wymondham, Norfolk,</li>
-                        <li>NR18 0WZ</li><br>
-                        <li>Tel: <a href="#" target="_self">01603 70 40 20</a></li>
-                    </ul>
-                </div>
-                <div class="footer_card yar_off">
-                    <h4>GREAT YARMOUTH OFFICE</h4>
-                    <ul>
-                        <li>Suite F23,</li>
-                        <li>Beacon Innovation Centre,</li>
-                        <li>Beacon Park, Gorleston,</li>
-                        <li>Great Yarmouth, Norfolk,</li>
-                        <li>NR31 7RA</li><br>
-                        <li>Tel: <a href="#" target="_self">01493 60 32 04</a></li>
-                    </ul>
+                <div class="offices">
+                    <div class="footer_card cam_off">
+                        <h4>CAMBRIDGE OFFICE</h4>
+                        <ul>
+                            <li>Unit 1.31,</li>
+                            <li>St John's Innovation Centre,</li>
+                            <li>Cowley Road, Miltion
+                            <li>Cambridge,</li>
+                            <li>CB4 0WS</li><br>
+                            <li>Tel: <a href="#" target="_self">01223 37 57 72</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_card wym_off">
+                        <h4>WYMONDHAM OFFICE</h4>
+                        <ul>
+                            <li>Unit 15,</li>
+                            <li>Penfold Drive,</li>
+                            <li>Gateway 11 Business Park,</li>
+                            <li>Wymondham, Norfolk,</li>
+                            <li>NR18 0WZ</li><br>
+                            <li>Tel: <a href="#" target="_self">01603 70 40 20</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_card yar_off">
+                        <h4>GREAT YARMOUTH OFFICE</h4>
+                        <ul>
+                            <li>Suite F23,</li>
+                            <li>Beacon Innovation Centre,</li>
+                            <li>Beacon Park, Gorleston,</li>
+                            <li>Great Yarmouth, Norfolk,</li>
+                            <li>NR31 7RA</li><br>
+                            <li>Tel: <a href="#" target="_self">01493 60 32 04</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="bottom">
@@ -416,7 +426,8 @@
                     <a href="#" target="_blank"><img class="icon" src="icons/407-twitter.png"></a>
                     <a href="#" target="_blank"><img class="icon" src="icons/458-linkedin.png"></a>
                 </div>        
-            </div>                               
+            </div>
+                                           
         </footer>
     </body>
 </html>

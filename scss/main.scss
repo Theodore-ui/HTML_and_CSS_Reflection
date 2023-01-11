@@ -58,6 +58,21 @@ body {
         text-decoration: 3px underline;
     }
 }
+.bar {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.view_all_2 {
+    float: right;
+    text-decoration: none;
+    font-size: 1.625rem;
+    font-weight: 600;
+    color: #333645;
+    &:hover {
+        text-decoration: 3px underline;
+    }
+}
 //header
 
 header {
@@ -170,6 +185,20 @@ picture img {
     &:hover {
         background-color: #e80a42;
     }   
+}
+@media screen and (min-width: 992px) {
+    .img_overlay {
+        text-align: left;
+        left: 30%;
+    }
+    .img_overlay .h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .img_overlay p {
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+    }  
 }
 // Our services
 .our_services .h1 {
@@ -334,23 +363,41 @@ picture img {
         width: 284px;
         margin: 30px 15px 0 15px;    
     }
+    .our_services_first_rows { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .our_services_first_rows .our_services_card {
         width: 393px;
         margin: 30px 15px 0 15px;    
     }
 }
 @media screen and (min-width:1260px) {
+    .our_services_second_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_second_rows .our_services_card {
+        width: 284px;
+        margin: 30px 15px 0 15px;
+    }
     .our_services_third_rows {
-        .our_services_third_rows {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-        .our_services_third_rows .our_services_card {
-            width: 208px;
-            margin: 30px 15px 0 15px;
-        }
-    }    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_third_rows .our_services_card {
+        width: 208px;
+        margin: 30px 15px 0 15px;
+    }
+    .our_services_first_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
 }
 //
 .scroll {
@@ -372,22 +419,21 @@ picture img {
 }
 .intro p {
     line-height: 1.875rem;
-    margin-bottom: 25px; 
+    margin-bottom: 40px; 
 } 
 .intro p a {
     text-decoration: none;
     color: #fff;
-}
-.intro p a:hover {
-    text-decoration: underline;
-}
-.welcome_to_netmatters_btns {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .btn_welcome_to_netmatters_container {
     margin-bottom: 90px;
+    max-width: 720px;
+}
+.clients {
+    max-width: 720px;    
 }
 .btn_welcome_to_netmatters {
     background-color: #272936;
@@ -401,11 +447,6 @@ picture img {
     font-size: 1.3rem;
     font-style: italic;
 }
-.reviews_btns {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 .btn_google_container {
     margin-top: 20px;
 }
@@ -418,7 +459,7 @@ picture img {
 }
 .intro .btn_trustpilot {
     background-color: #00b67b;
-    margin-top: 20px;
+    margin-top: 35px;
     &:hover {
         background-color: #009b69;
     }
@@ -433,15 +474,55 @@ picture img {
     vertical-align: middle;
     margin: 0 -4px 0 12px;   
 }
+@media screen and (min-width:992px) and (max-width:1260px) {
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .welcome {
+        width: 455px;
+        padding: 0 15px;
+    }
+    .clients {
+        width: 455px;
+        padding: 0 15px;
+    }
+}
+@media screen and (min-width:1260px) {
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .welcome {
+        width: 570px;
+        padding: 0 15px;
+    }
+    .clients {
+        width: 570px;
+        padding: 0 15px;
+    }
+    .welcome_to_netmatters_btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .review_btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }    
+}
 // latest news
-.latest_news .h1 {
+.latest_news .h1 strong {
     font-size: 2.25rem;
     font-weight: 600;    
 }
 
 .latest_news_card {
     margin-top: 30px;
-    max-width: 658px;
+    width: 100%;
 }
 
 .latest_news_card_bottom {
@@ -534,7 +615,15 @@ picture img {
     font-size: .875rem;
     display: inline-block;
 }
-@media screen and (min-width:688px) {
+@media screen and (min-width:0) and (max-width:768px) {
+    .view_all_2 {
+        display: none;
+    }
+} 
+@media screen and (min-width:768px) and (max-width:992px) {
+    .view_all {
+        display: none;
+    }
     .girls_day {
         display: none;
     }
@@ -543,13 +632,50 @@ picture img {
         flex-direction: row;
         justify-content: center;
     }
+    .latest_news_card {
+        margin: 30px 15px 0 15px;
+        max-width: 345px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1260px) {
+    .view_all {
+        display: none;
+    }
+    .girls_day {
+        display: none;
+    }
+    .latest_news_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .latest_news_card {
+        margin: 30px 15px 0 15px;
+        max-width: 455px;
+    }
+}
+@media screen and (min-width:1260px) {
+    .latest_news_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .latest_news_card {
+        margin: 30px 15px 0 15px;
+        max-width: 370px;
+    }
 }
 
 //Email Newsletter Sign-Up
 
 form {
     color:#333645;
-    background-color: #DDDDDD;   
+    background-color: #DDDDDD;
+    width: 100%;
+}
+.form_container {
+    max-width: 720px;
+    margin: 0 auto;  
 }
 form h2 {
     margin-top: 0;
@@ -604,6 +730,24 @@ form label a {
     border: none;
     background-color: #333645;
     cursor: pointer;
+}
+@media screen and (min-width:992px) {
+    .name_email_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .name_container {
+        width: 423px;
+        padding: 0 15px;
+    }
+    .email_container {
+        width: 423px;
+        padding: 0 15px;
+    }
+    .form_container {
+        width: 876px;
+    }
 } 
 //footer styling
 
@@ -674,7 +818,13 @@ footer h4 {
     background-color: red;
     border-radius: 50%;
 }
-
+@media screen and (min-width: 1260px) {
+    .footer_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 
 
 
