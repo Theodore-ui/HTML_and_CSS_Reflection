@@ -1,0 +1,198 @@
+.our_services .h1 {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 2.7rem;
+    margin-bottom: 15px;    
+}
+.our_services_card_container {
+    color: #333645; 
+    display: block;       
+}
+.our_services_card {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    display: block;
+    max-width: 658px;
+    position: relative;
+}
+.our_services_card_software:hover {
+    background-color: #67809f;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_software {
+        color: #67809f;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_suport:hover {
+    background-color: #4183d7;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_suport {
+        color: #4183d7;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_marketing:hover {
+    background-color: #2ecc71;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_marketing {
+        color: #2ecc71;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_telecoms:hover {
+    background-color: #d64541;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_telecoms {
+        color: #d64541;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_design:hover {
+    background-color: #926fb1;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_design {
+        color: #926fb1;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_security:hover {
+    background-color: #f62459;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_security {
+        color: #f62459;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card_training:hover {
+    background-color: #ce4125;
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    .btn_training {
+        color: #ce4125;
+        background-color: #fff;
+        transition: .5s ease;     
+    }
+}
+.our_services_card img {
+    margin-bottom: 17px;
+}
+.our_services_card .h2 {
+    font-size: 1.3rem;
+    margin-bottom: 21px;
+    font-weight: 400;
+}
+.our_services_card .p {
+    margin-bottom: 20px;
+}
+.btn_software {
+    background-color: #67809f;
+}
+.btn_suport {
+    background-color: #4183d7;    
+}
+.btn_marketing {
+    background-color: #2ecc71;   
+}
+.btn_telecoms {
+    background-color: #d64541;    
+}
+.btn_design {
+    background-color: #926fb1;    
+}
+.btn_security {
+    background-color: #f62459;    
+}
+.btn_training {
+    background-color: #ce4125;    
+}
+
+.view_all_container {
+    text-align: center;
+    margin-top: 30px;
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .our_services_first_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_first_rows .our_services_card {
+        width: 284px;
+        margin: 30px 15px 0 15px;    
+    }
+}
+@media screen and (min-width:992px) and (max-width:1260px){
+    .our_services_second_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_second_rows .our_services_card {
+        width: 284px;
+        margin: 30px 15px 0 15px;    
+    }
+    .our_services_first_rows { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_first_rows .our_services_card {
+        width: 393px;
+        margin: 30px 15px 0 15px;    
+    }
+}
+@media screen and (min-width:1260px) {
+    .our_services_second_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_second_rows .our_services_card {
+        width: 284px;
+        margin: 30px 15px 0 15px;
+    }
+    .our_services_third_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .our_services_third_rows .our_services_card {
+        width: 208px;
+        margin: 30px 15px 0 15px;
+    }
+    .our_services_first_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}

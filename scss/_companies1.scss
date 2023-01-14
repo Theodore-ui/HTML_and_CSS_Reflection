@@ -1,0 +1,29 @@
+.companies_1 {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.scroll_1 {
+    object-fit: cover;
+    padding: 0 20px;
+}
+.scroll_1_img {
+    max-width: 100%;
+    height: auto;
+}
+.scroll_1_img_colour {
+    display: none;
+}
+.scroll_1_img_grey:hover+.scroll_1_img_colour {
+    display: block;
+}
+.scroll_1_img_colour:hover+.scroll_1_img_grey {
+    display: none;
+}
+@media screen and (min-width:0) and (max-width:768px) {
+    .companies_1 {
+        display: none;
+    }
+}

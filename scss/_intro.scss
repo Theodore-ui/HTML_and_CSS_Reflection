@@ -1,0 +1,136 @@
+.intro {
+    background-color: #333645;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.intro h2 { 
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+.intro p {
+    line-height: 1.875rem;
+    margin-bottom: 40px; 
+} 
+.intro p a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.btn_welcome_to_netmatters_container {
+    margin-bottom: 90px;
+    max-width: 720px;
+}
+.clients {
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;    
+}
+.welcome {
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn_welcome_to_netmatters {
+    background-color: #272936;
+    margin-bottom: 50px;
+    &:hover {
+        background-color: #121318;
+    }
+}
+.client_quote {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.btn_google_container {
+    margin-top: 20px;
+}
+.intro .btn_google {
+    background-color: #4387f6;
+    margin-right: 8px;
+    margin-top: 60px;
+    &:hover {
+        background-color: #166af4;
+    }
+}
+.intro .btn_trustpilot {
+    background-color: #00b67b;
+    margin-top: 60px;
+    &:hover {
+        background-color: #009b69;
+    }
+}
+.client_quote_author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a3a8ac;
+} 
+
+.arrow {
+    vertical-align: middle;
+    margin: 0 -4px 0 12px;   
+}
+@media screen and (min-width:550px) and (max-width:992px) {
+    .welcome_to_netmatters_btns {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+@media screen and (min-width:617px) and (max-width:992px) {
+    .review_btns {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1260px) {
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .welcome {
+        width: 455px;
+        padding: 0 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .clients {
+        width: 455px;
+        padding: 0 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (min-width:1260px) {
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .welcome {
+        width: 600px;
+        padding: 0 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .clients {
+        width: 600px;
+        padding: 0 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .welcome_to_netmatters_btns {
+        display: flex;
+        flex-direction: row;    
+    }
+    .review_btns {
+        display: flex;
+        flex-direction: row;
+    }    
+}

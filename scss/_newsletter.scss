@@ -1,0 +1,97 @@
+form {
+    color:#333645;
+    background-color: #DDDDDD;
+}
+.form_container {
+    max-width: 720px;
+    margin: 0 auto;  
+}
+form h2 {
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-weight: normal;
+    font-size: 32px;
+}
+.name_email_container {
+    display: flex;
+    flex-direction: column;
+}
+.required:after {
+    content: " *";
+    color: #d24d57;
+}
+form label {
+    font-weight: 600;
+    display: block;
+}
+.side_label {
+    line-height: 32px;   
+}
+form input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 5px 15px; 
+}
+form label a {
+    color: #333645;
+    text-decoration: underline;
+}
+.checkbox {
+    border-radius: 3px;
+    border: 3px solid #333645;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    float: left;
+    overflow: auto;
+    margin-right: 20px;
+    background-color: transparent;    
+}
+.checkbox_note {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.btn_submit {
+    padding: 5px 15px;
+    height: auto;
+    border: none;
+    background-color: #333645;
+    cursor: pointer;
+}
+@media screen and (min-width:992px) and (max-width:1260px) {
+    .name_email_container {
+        display: flex;
+        flex-direction: row;
+    }
+    .name_container {
+        width: 423px;
+        padding: 0 15px 0 0;
+    }
+    .email_container {
+        width: 423px;
+        padding: 0 0 0 15px;
+    }
+    .form_container {
+        width: 940px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width:1260px) {
+    .name_email_container {
+        display: flex;
+        flex-direction: row;
+    }
+    .name_container {
+        width: 570px;
+        padding: 0 15px 0 0;
+    }
+    .email_container {
+        width: 570px;
+        padding: 0 0 0 15px;
+    }
+    .form_container {
+        width: 1170px;
+        margin: 0 auto;
+    }    
+}  

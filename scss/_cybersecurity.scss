@@ -1,0 +1,54 @@
+.cyber_security {
+    position: relative;
+    text-align: center;
+}
+picture img {
+    object-fit: cover;
+    height: 550px;
+    width: 100%;
+    filter: brightness(50%);       
+}
+.img_overlay {
+    display: block;
+    position: absolute;
+    text-align: center;
+    color:#fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cyber_security .h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0 0 1.25rem;
+}
+.img_overlay p {
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+.btn_find_out_more {
+    font-size: 1.25rem;
+    background-color: #f62459;
+    margin-top: 60px; 
+    margin-bottom: 18px;
+    &:hover {
+        background-color: #e80a42;
+    }   
+}
+@media screen and (min-width: 992px) {
+    .img_overlay {
+        text-align: left;
+        left: 30%;
+    }
+    .img_overlay .h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .img_overlay p {
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+    }  
+}

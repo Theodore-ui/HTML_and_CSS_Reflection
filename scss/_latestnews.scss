@@ -1,0 +1,152 @@
+.latest_news .h1 strong {
+    font-size: 2.25rem;
+    font-weight: 600;    
+}
+
+.latest_news_card {
+    padding: 30px 15px 0 15px;
+    width: 100%;
+}
+
+.latest_news_card_bottom {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 0 0 3px 3px;
+    flex-grow: 720px;
+}
+.latest_news_card img {
+    object-fit: cover;
+    width: 100%;
+}
+.img_tool_tip {
+    position: relative; 
+    display: block;
+}
+.img_tool_tip .tool_tip {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: block;
+    font-weight: 600;
+    padding: 0 10px;
+    font-size: .75rem;
+    &:hover {
+        text-decoration: underline;
+    }   
+}
+.tool_tip_matt_hurst {
+    background-color: #4183d7;
+}
+.tool_tip_staff_awards {
+    background-color: #926fb1;
+}
+.tool_tip_girls_day {
+    background-color: #2ecc71;
+}
+.latest_news_card_bottom {
+    display: block;
+    padding: 30px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.latest_news_card_bottom .h3 {
+    margin: 0 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.matt_hurst .h3 {
+    color: #4183d7; 
+}
+.staff_awards .h3 {
+    color: #926fb1; 
+}
+.girls_day .h3 {
+    color: #2ecc71; 
+}
+.latest_news_card_bottom p {
+    margin: 0 0 25px;
+    line-height: 1.375rem;
+    font-size: .8125rem;
+    color: #666;
+}
+.latest_news_card_bottom .btn_matt_hurst {  
+    background-color: #4183d7;
+}
+.latest_news_card_bottom .btn_staff_awards {
+    background-color: #926fb1;     
+}
+.latest_news_card_bottom .btn_girls_day {  
+    background-color: #2ecc71;
+}
+.icon_m_data {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    display: inline-block;
+}
+.icon_m {  
+    max-width: 47px;
+}
+.text {
+    padding-left: 20px;
+    font-size: .875rem;
+    display: inline-block;
+}
+@media screen and (min-width:0) and (max-width:768px) {
+    .view_all_2 {
+        display: none;
+    }
+} 
+@media screen and (min-width:768px) and (max-width:992px) {
+    .view_all {
+        display: none;
+    }
+    .girls_day {
+        display: none;
+    }
+    .latest_news_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .latest_news_card {
+        max-width: 345px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1260px) {
+    .view_all {
+        display: none;
+    }
+    .girls_day {
+        display: none;
+    }
+    .latest_news_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .latest_news_card {
+        margin: 30px 15px 0 15px;
+        width: 455px;
+    }
+}
+@media screen and (min-width:1260px) {
+    .latest_news_card_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .latest_news_card {
+        margin: 30px 15px 0 15px;
+        width: 370px;
+    }
+    .view_all {
+        display: none;
+    }
+}
