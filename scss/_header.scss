@@ -39,7 +39,7 @@ header .search_1 {
     padding: 5px 40px 5px 15px;  
 }
 header .search_2 {
-    height: 56px;
+    height: 44px;
     padding: 5px 15px;
     border-color: #ccc;
     border: 1px solid #e5e5e5;
@@ -76,7 +76,7 @@ header .search_2 {
 .search_icon_2 {
     outline: none;
     padding: 7px 20px 3px;
-    height: 56px;
+    height: 46px;
     font-size: 1.063rem;
     border-radius: 0 3px 3px 0;
     border: none;
@@ -93,7 +93,6 @@ header .search_2 {
 }
 .header_2 {
     background-color: #333645;
-    position: relative;
 }
 .nav_bar {
     display: flex;
@@ -102,10 +101,10 @@ header .search_2 {
     margin: 0;
     padding: 0;
     justify-content: center;
+    position: relative;
 }
 
 .nav_bar li .nav_item {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 134.288px;
@@ -122,23 +121,83 @@ header .search_2 {
 .nav_bar li .nav_item small {
     padding-bottom: 1px;
 }
-.lists_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 50px 0;
-    width: 970px;
+
+.nav_item_software:hover {
+    background-color: #67809f;
+}
+.nav_item_software:hover+.list_container_software {
+    display: block;
+}
+
+.nav_item_support:hover {
+    background-color: #4183d7;
+}
+.nav_item_support:hover+.list_container_software {
+    display: block;
+}
+
+.nav_item_marketing:hover {
+    background-color: #2ecc71;
+}
+.nav_item_marketing:hover+.list_container_software {
+    display: block;
+}
+
+.nav_item_telecoms:hover {
+    background-color: #d64541;
+}
+.nav_item_telecoms:hover+.list_container_software {
+    display: block;
+}
+
+.nav_item_design:hover {
+    background-color: #926fb1;
+}
+.nav_item_design:hover+.list_container_software {
+    display: block;
+}
+
+.nav_item_cyber:hover {
+    background-color: #f62459;
+}
+.nav_item_cyber:hover+.list_container_software {
+    display: block;
+}
+
+.nav_item_developer:hover {
+    background-color: #ce4125;
+}
+.nav_item_developer:hover+.list_container_software {
+    display: block;
+}
+
+.list_container {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    z-index: 10;
 }
 .list_menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: -15px;
     list-style: none;
     text-align: left;
+    margin-top: -15px;
+    margin-bottom: -15px;
     padding: 0;
     margin-right: auto;
-    margin-left: auto;    
+    margin-left: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 970px;    
+}
+.list_menu .list_menu_item {
+    width: 33%;
+    margin-top: 15px;
 }
 .lists_container_title {
     color: #fff;
@@ -147,10 +206,10 @@ header .search_2 {
     font-weight: 500;
     font-size: 2rem;
     width: 100%; 
+    text-align: left;
 }
-.list_menu li {
-    width: 33%;
-    margin-top: 15px;
+.list_menu li a img {
+    margin-right: 10px;
 }
 .list_menu li a {
     display: flex;
@@ -167,6 +226,31 @@ header .search_2 {
 }
 .list_container_software {
     background-color: #67809f;
+    display: none;
+}
+.list_container_development {
+    background-color: #4183d7;
+    display: none;
+}
+.list_container_marketing {
+    background-color: #2ecc71;
+    display: none;
+}
+.list_container_telecoms {
+    background-color: #d64541;
+    display: none;
+}
+.list_container_design {
+    background-color: #926fb1;
+    display: none;
+}
+.list_container_cyber {
+    background-color: #f62459;
+    display: none;
+}
+.list_container_developer {
+    background-color: #ce4125;
+    display: none;
 }
 @media screen and (min-width:0) and (max-width:768px) {
     .search_search_icon_2 {
@@ -194,6 +278,9 @@ header .search_2 {
     .phone {
         display: none;
     }
+    .phone_burger {
+        margin: 0;
+    }
     .btn_support {
         display: none;
     }
@@ -216,18 +303,24 @@ header .search_2 {
     .phone {
         display: none;
     }
+    .phone_burger {
+        margin: 0;
+    }
 }
 @media screen and (min-width:1260px) {
-    .header_1 {
+    .row {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
     }
     .nav_bar li .nav_item {
         width: 167.137px;
     }
     .phone {
         display: none;
+    }
+    .phone_burger {
+        margin: 0;
     }
     .search_search_icon {
         display: none;
@@ -237,5 +330,8 @@ header .search_2 {
     }
     header .search_2 {
         width: 208px;
+    }
+    .list_menu {
+        width: 1200px;
     }
 }  

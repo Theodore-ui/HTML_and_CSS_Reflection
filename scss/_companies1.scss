@@ -13,14 +13,17 @@
     max-width: 100%;
     height: auto;
 }
+.scroll_1_img_grey {
+    position: relative;
+}
 .scroll_1_img_colour {
+    //position: absolute;
+    //top: 50%;
+    //left: 50%; 
     display: none;
 }
-.scroll_1_img_grey:hover+.scroll_1_img_colour {
+.scroll_1:hover + .scroll_1_img_colour {
     display: block;
-}
-.scroll_1_img_colour:hover+.scroll_1_img_grey {
-    display: none;
 }
 @media screen and (min-width:0) and (max-width:768px) {
     .companies_1 {

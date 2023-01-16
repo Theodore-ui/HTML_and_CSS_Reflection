@@ -139,25 +139,48 @@
     text-align: center;
     margin-top: 30px;
 }
+.bar_our_servies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+@media screen and (min-width:0) and (max-width:768px) {
+    .bar_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding-left: 15px;
+    }
+    .our_services_card_container {
+        margin: 0 15px;
+    }
+}
 @media screen and (min-width:768px) and (max-width:992px){
+    .bar_our_servies {
+        width: 718px;    
+    }
     .our_services_first_rows {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
     .our_services_first_rows .our_services_card {
-        width: 284px;
+        width: 283px;
         margin: 30px 15px 0 15px;    
     }
 }
 @media screen and (min-width:992px) and (max-width:1260px){
+    .bar_our_servies {
+        width: 936px;
+    }
     .our_services_second_rows {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
     .our_services_second_rows .our_services_card {
-        width: 284px;
+        width: 231.325px;
         margin: 30px 15px 0 15px;    
     }
     .our_services_first_rows { 
@@ -171,13 +194,16 @@
     }
 }
 @media screen and (min-width:1260px) {
+    .bar_our_servies {
+        width: 1164px;
+    }
     .our_services_second_rows {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
     .our_services_second_rows .our_services_card {
-        width: 284px;
+        width: 308px;
         margin: 30px 15px 0 15px;
     }
     .our_services_third_rows {

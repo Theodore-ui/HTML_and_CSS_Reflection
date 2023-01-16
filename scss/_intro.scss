@@ -22,8 +22,9 @@
     }
 }
 .btn_welcome_to_netmatters_container {
-    margin-bottom: 90px;
+    margin-bottom: 30px;
     max-width: 720px;
+    margin-left: 8px
 }
 .clients {
     max-width: 720px;
@@ -48,7 +49,7 @@
     font-style: italic;
 }
 .btn_google_container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .intro .btn_google {
     background-color: #4387f6;
@@ -57,6 +58,9 @@
     &:hover {
         background-color: #166af4;
     }
+}
+.btn_trustpilot_container {
+    margin-top: 30px;   
 }
 .intro .btn_trustpilot {
     background-color: #00b67b;
