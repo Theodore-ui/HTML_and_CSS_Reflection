@@ -3,16 +3,20 @@
 }
 .net_logo {
     max-width: 100%;
-    padding-right: 15px;
+    margin-right: 15px;
 }
-.burger {
-    background-color: #333645;
-    padding: 15px; 
-    border-radius: 3px;
+.burger_button {
     margin-left: 15px;
-}
-.burger:hover {
-    background-color: #22242e;
+    background-color: #333645;
+    padding: 10px 15px; 
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    &:hover {
+        background-color: #22242e;
+    }
+    
+
 }
 .phone:hover {
     border-bottom: 3px solid black;
@@ -34,7 +38,7 @@ header .search_1 {
     outline: 1px solid hsla(0,0%,100%,.2);
     border: 2px solid rgba(0,0,0,.1);
     transition: none;
-    height: 47px;
+    height: 33px;
     width: 100%;
     padding: 5px 40px 5px 15px;  
 }
@@ -45,7 +49,6 @@ header .search_2 {
     border: 1px solid #e5e5e5;
     border-radius: 0;
     width: 174px;
-    margin-left: 15px;
     &:focus {
         border-color: #5bc0de;
         outline: 0;
@@ -55,6 +58,7 @@ header .search_2 {
     position: relative;    
 }
 .search_search_icon_2 {
+    display: flex;
     position: relative; 
     align-items: center;   
 }
@@ -72,24 +76,37 @@ header .search_2 {
     right: 3px;
     bottom: 3px;
     font-size: 20px;
+    cursor: pointer;
 }
 .search_icon_2 {
     outline: none;
-    padding: 7px 20px 3px;
-    height: 46px;
+    padding: 11px 20px 8px;
+    //height: 46px;
     font-size: 1.063rem;
     border-radius: 0 3px 3px 0;
     border: none;
-    vertical-align: bottom;
+    //vertical-align: bottom;
     background-color: #999aa2;
     color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: #7e808a;    
+    }
 }
 .btn_support {
     background-color: #4183d7;
+    padding: 10px 15px;
+    &:hover {
+        background-color: #2a6ec6
+    }
 }
 .btn_contact {
     background-color: #999aa2;
-    margin-left: 20px;
+    margin: 0 20px;
+    padding: 10px 15px;
+    &:hover {
+        background-color: #84858f;    
+    }
 }
 .header_2 {
     background-color: #333645;
@@ -114,6 +131,11 @@ header .search_2 {
     text-decoration: none;
     line-height: 1;
     text-align: center;
+    &:hover {
+        & + .list_container {
+            display: block;
+        }       
+    }
 }
 .nav_bar li .nav_item img {
     padding-bottom: 10px;
@@ -121,54 +143,30 @@ header .search_2 {
 .nav_bar li .nav_item small {
     padding-bottom: 1px;
 }
-
 .nav_item_software:hover {
-    background-color: #67809f;
+    background-color: #67809f;  
 }
-.nav_item_software:hover+.list_container_software {
-    display: block;
-}
-
 .nav_item_support:hover {
     background-color: #4183d7;
+ 
 }
-.nav_item_support:hover+.list_container_software {
-    display: block;
-}
-
 .nav_item_marketing:hover {
     background-color: #2ecc71;
 }
-.nav_item_marketing:hover+.list_container_software {
-    display: block;
-}
-
 .nav_item_telecoms:hover {
-    background-color: #d64541;
-}
-.nav_item_telecoms:hover+.list_container_software {
-    display: block;
+    background-color: #d64541;   
 }
 
 .nav_item_design:hover {
     background-color: #926fb1;
 }
-.nav_item_design:hover+.list_container_software {
-    display: block;
-}
 
 .nav_item_cyber:hover {
     background-color: #f62459;
 }
-.nav_item_cyber:hover+.list_container_software {
-    display: block;
-}
 
 .nav_item_developer:hover {
     background-color: #ce4125;
-}
-.nav_item_developer:hover+.list_container_software {
-    display: block;
 }
 
 .list_container {
@@ -178,6 +176,9 @@ header .search_2 {
     left: 0;
     min-width: 100%;
     z-index: 10;
+    &:hover {
+        display: block;
+    }
 }
 .list_menu {
     display: flex;
@@ -198,6 +199,17 @@ header .search_2 {
 .list_menu .list_menu_item {
     width: 33%;
     margin-top: 15px;
+    align-items: center;
+}
+.list_menu .list_menu_item a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 10px 15.008px 10px 0;  
+}
+.list_menu .list_menu_item a span{
+    text-align: left;  
 }
 .lists_container_title {
     color: #fff;
@@ -210,6 +222,7 @@ header .search_2 {
 }
 .list_menu li a img {
     margin-right: 10px;
+    
 }
 .list_menu li a {
     display: flex;
@@ -222,34 +235,39 @@ header .search_2 {
     line-height: 1.313rem;
     &:hover {
         text-decoration: 2px underline;
+        cursor: pointer;
     }
 }
 .list_container_software {
-    background-color: #67809f;
+    background-color: #526781;
     display: none;
+    &:hover + .nav_item_software {
+        background-color: #67809f; 
+          
+    } 
 }
-.list_container_development {
-    background-color: #4183d7;
+.list_container_support {
+    background-color: #286abd;
     display: none;
 }
 .list_container_marketing {
-    background-color: #2ecc71;
+    background-color: #25a25a;
     display: none;
 }
 .list_container_telecoms {
-    background-color: #d64541;
+    background-color: #bc2c28;
     display: none;
 }
 .list_container_design {
-    background-color: #926fb1;
+    background-color: #79539a;
     display: none;
 }
 .list_container_cyber {
-    background-color: #f62459;
+    background-color: #de093f;
     display: none;
 }
 .list_container_developer {
-    background-color: #ce4125;
+    background-color: #a3331d!important;
     display: none;
 }
 @media screen and (min-width:0) and (max-width:768px) {
@@ -296,6 +314,16 @@ header .search_2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    .search_2 {
+        display: none;
+    }
+    .search_icon_2 {
+        border-radius: 3px;
+        &:active + .search_2 {
+            display: block;
+            
+        }
     }
     .search_search_icon {
         display: none;

@@ -2,10 +2,18 @@
     font-size: 2.25rem;
     font-weight: 600;    
 }
-
+.latest_news_card_container {
+    display: block;
+}
 .latest_news_card {
     margin: 30px 15px 0 15px;
     width: 100%;
+    display: block;
+    position: relative;
+    &:hover {
+    top: -10px;
+    transition: .5s ease;
+    }
 }
 
 .latest_news_card_bottom {
@@ -88,7 +96,6 @@
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid #ccc;
-    display: inline-block;
 }
 .icon_m {  
     max-width: 47px;

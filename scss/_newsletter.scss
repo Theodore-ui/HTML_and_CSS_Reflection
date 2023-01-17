@@ -30,7 +30,7 @@ form label {
 form input {
     margin-bottom: 15px;
     width: 100%;
-    height: 47px;
+    height: 35px;
     padding: 5px 15px;
     border: 1px solid #ccc;
     border-radius: 2px;
@@ -72,16 +72,16 @@ form label a {
         display: flex;
         flex-direction: row;
     }
-    .name_container {
+    #name {
         width: 423px;
         margin: 0 15px 0 0;
     }
-    .email_container {
+    #email {
         width: 423px;
         margin: 0 0 0 15px;
     }
     .form_container {
-        width: 940px;
+        max-width: 940px;
         margin: 0 auto;
     }
 }
@@ -90,16 +90,16 @@ form label a {
         display: flex;
         flex-direction: row;
     }
-    .name_container {
+    #name {
         width: 570px;
         margin: 0 15px 0 0;
     }
-    .email_container {
+    #email {
         width: 570px;
         margin: 0 0 0 15px;
     }
     .form_container {
-        width: 1170px;
+        max-width: 1225px;
         margin: 0 auto;
     }    
 }  
