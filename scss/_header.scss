@@ -131,11 +131,12 @@ header .search_2 {
     text-decoration: none;
     line-height: 1;
     text-align: center;
-    &:hover {
-        & + .list_container {
-            display: block;
-        }       
-    }
+    // display menu when hovering on nav item
+    // &:hover {
+    //     & + .list_container {
+    //         display: block;
+    //     }       
+    // }
 }
 .nav_bar li .nav_item img {
     padding-bottom: 10px;
@@ -143,29 +144,39 @@ header .search_2 {
 .nav_bar li .nav_item small {
     padding-bottom: 1px;
 }
-.nav_item_software:hover {
-    background-color: #67809f;  
+
+.list_nav_item:hover > div {
+    display: block;
 }
-.nav_item_support:hover {
+.lni_software:hover > a {
+    background-color: #67809f;
+}
+ 
+.lni_support:hover > a {
     background-color: #4183d7;
  
 }
-.nav_item_marketing:hover {
+.lni_marketing:hover > a {
     background-color: #2ecc71;
 }
-.nav_item_telecoms:hover {
+.lni_telecoms:hover > a {
     background-color: #d64541;   
 }
+.triangle {
+    width: 200px;
+    height: 200px;
+    background: pink;
+}
 
-.nav_item_design:hover {
+.lni_design:hover > a {
     background-color: #926fb1;
 }
 
-.nav_item_cyber:hover {
+.lni_cyber:hover > a {
     background-color: #f62459;
 }
 
-.nav_item_developer:hover {
+.lni_developer:hover > a {
     background-color: #ce4125;
 }
 
@@ -176,9 +187,13 @@ header .search_2 {
     left: 0;
     min-width: 100%;
     z-index: 10;
-    &:hover {
-        display: block;
-    }
+    //menu display whne hovered over 
+    // &:hover {
+    //     display: block;
+    // }
+    // &:hover + .nav_item {
+    //     background-color: green;
+    // }
 }
 .list_menu {
     display: flex;
@@ -238,13 +253,19 @@ header .search_2 {
         cursor: pointer;
     }
 }
+// li:hover .nav_item_software {
+//     color: red;
+//   }
+//   .li .nav_item_software:hover,
+//   .li .nav_item_software:hover ~ .list_container_software {
+//     color: blue;
+//   }
 .list_container_software {
     background-color: #526781;
     display: none;
-    &:hover + .nav_item_software {
-        background-color: #67809f; 
-          
-    } 
+    // &:hover + .nav_item_software {
+    //     background-color: #67809f;     
+    // } 
 }
 .list_container_support {
     background-color: #286abd;
@@ -362,4 +383,4 @@ header .search_2 {
     .list_menu {
         width: 1200px;
     }
-}  
+}
