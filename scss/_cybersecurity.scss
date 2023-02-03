@@ -6,7 +6,7 @@ picture img {
     object-fit: cover;
     height: 550px;
     width: 100%;
-    filter: brightness(50%);       
+    filter: brightness(50%);      
 }
 .img_overlay {
     display: block;
@@ -38,6 +38,21 @@ picture img {
         background-color: #e80a42;
     }   
 }
+//stick styles
+.slick-dots {
+    bottom: 30px;
+}
+.slick-dots li button:before {
+    font-size: 11px; 
+    color: hsla(0,0%,100%,.5);
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
 @media screen and (min-width: 992px) {
     .img_overlay {
         text-align: left;
