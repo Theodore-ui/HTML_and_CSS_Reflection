@@ -23,6 +23,9 @@ form, :after, :before {
 .companies_2, :after, :before {
     box-sizing: border-box;
 }
+.sidemenu {
+    box-sizing: border-box;
+}
 //body Styling
 
 body {
@@ -130,6 +133,10 @@ body {
 //footer styling
 
 @import "footer";
+
+//Side menu
+
+@import "side_menu";
 
 
 
