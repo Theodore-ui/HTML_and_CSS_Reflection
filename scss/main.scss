@@ -26,6 +26,7 @@ form, :after, :before {
 .sidemenu {
     box-sizing: border-box;
 }
+
 //body Styling
 
 body {
@@ -33,7 +34,7 @@ body {
     font-size: 1rem;
     letter-spacing: .4px;
     line-height: 1.42857143;
-    color: #333645; 
+    color: #333645;   
 }
 .section {
     padding: 50px 0 0 0;    
@@ -137,6 +138,19 @@ body {
 //Side menu
 
 @import "side_menu";
+
+// JS classes
+
+.active {
+    display: block;
+}
+.shift_left {
+    position: relative;
+    left: -270px;
+}
+.targeted {
+    background-color: hsla(0,0%,100%,.05);
+}
 
 
 
