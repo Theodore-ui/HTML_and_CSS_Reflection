@@ -8,33 +8,54 @@
 $('.header').sticky(); //sticky Header
 
 const searchIconTwo = document.querySelector('.search_icon_2');
-const searchTwo = document.querySelector('.search_2');
+const searchTwo = $('.search_2');
+const supportBtn = $('.btn_support');
+const contactBtn = $('.btn_contact');
+
 
 searchIconTwo.addEventListener('click', function () {
-    if (searchTwo.classList.contains('active')) {
-        searchTwo.classList.remove('active');
+    if (searchTwo.is(':visible')) {
+        searchTwo.fadeOut();
+        supportBtn.delay(400).fadeIn(); 
+        contactBtn.delay(400).fadeIn();
     } else {
-        searchTwo.classList.add('active');  
+        searchTwo.delay(400).fadeIn();
+        supportBtn.fadeOut(); 
+        contactBtn.fadeOut(); 
     }   
 });
+
 
 const mainColumn = document.querySelector('.main_column'); 
-const sideMenu = document.querySelector('.sidemenu');
+const sideMenu = $('.sidemenu');
 const burgerBtn = document.querySelector('.burger_button');
+const burger = document.querySelector('.burger'); 
+const cross = document.querySelector('.cross');
+const cover = $('.cover');
 
 burgerBtn.addEventListener('click', function () {
-    if (sideMenu.classList.contains('active')) {
-        sideMenu.classList.remove('active');
-        mainColumn.classList.remove('shift_left');
+    if (sideMenu.is(':visible')) {
+        sideMenu.animate({width:'toggle'}, 400);
+        mainColumn.classList.remove('shift_left');  
+        cross.classList.remove('active');
+        burger.classList.add('active');
+        cover.classList.remove('greyed_out');
     } else {
-        sideMenu.classList.add('active');
+        sideMenu.animate({width:'toggle'}, 400);
         mainColumn.classList.add('shift_left'); 
+        cross.classList.add('active');
+        burger.classList.remove('active');
+        cover.classList.add('greyed_out');
+        // mainColumn.scrollTop(0);
     }   
 });
 
-// const sidemenuItem = document.querySelector('.sidemenu_service_item'); 
-// const sidemenuBtn =  document.querySelector('.sidemenu_service_btn'); 
+const cookiePop = $('.cookie_pop');
+const cookieBnt = $('.cookie_btn');
 
-// sidemenuItem.addEventListener('mouseover', function (e) {
-//     e > sidemenuBtn.classList.add('targeted')    
-// });
+cookieBnt.click(function () {
+    cookiePop.animate({width:'toggle'}, 350);    
+});
+
+
+

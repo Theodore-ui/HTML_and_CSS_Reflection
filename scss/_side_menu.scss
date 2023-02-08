@@ -3,16 +3,17 @@
     font-size: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 9;
     height: 100%;
     background: #333645;
-    overflow: auto;
+    overflow-y: auto;
     display: none;
     & ul {
         color: white;
+        list-style: none;
     }
     & a {
         text-decoration: none;
@@ -24,7 +25,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-items: center;
     padding: 21px;
     background-color: #333645;
@@ -104,9 +104,6 @@
     }
     .sidemenu_section {
         width: 350px;
-    }
-    .shift_left {
-        left: -350px;
     }
 }
 

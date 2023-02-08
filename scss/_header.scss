@@ -19,8 +19,12 @@
     &:hover {
         background-color: #22242e;
     }
-    
-
+}
+.burger {
+    display: none;
+}
+.cross {
+    display: none;
 }
 .phone:hover {
     border-bottom: 3px solid black;
@@ -43,7 +47,7 @@ header .search_1 {
     border: 2px solid rgba(0,0,0,.1);
     transition: none;
     height: 33px;
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 5px 40px 5px 15px; 
     margin-top: 5px; 
 }
