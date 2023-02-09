@@ -1,4 +1,23 @@
-
+// html::-webkit-scrollbar {
+//     display: none;
+// }
+.cover {
+    position: fixed;
+    z-index: 3;
+    display: none;
+    transition: opacity .5s;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer; 
+    background-color: rgba(0,0,0,0.5);
+}
+// .main_column {
+//     overflow: scroll;
+// }
 header {
     box-sizing: border-box;
 }
@@ -23,14 +42,49 @@ form, :after, :before {
 .companies_2, :after, :before {
     box-sizing: border-box;
 }
+.sidemenu {
+    box-sizing: border-box;
+}
+
 //body Styling
+
+.cookie_pop {
+    color: white;
+    padding: 15px;
+    background-color: #333645;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    & p {
+        padding-right: 15px;
+        margin: 0;
+    }
+    & button {
+        color:white;
+        padding: 5px 10px;
+        background-color: #4183d7;;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            background-color: #2a6ec6;
+        }
+    }
+}
 
 body {
     font-family: Poppins,sans-serif;
     font-size: 1rem;
     letter-spacing: .4px;
     line-height: 1.42857143;
-    color: #333645; 
+    color: #333645;
+
 }
 .section {
     padding: 50px 0 0 0;    
@@ -95,6 +149,8 @@ body {
         text-decoration: 3px underline;
     }
 }
+
+
 //header
 
 @import "header";
@@ -130,6 +186,32 @@ body {
 //footer styling
 
 @import "footer";
+
+//Side menu
+
+@import "side_menu";
+
+// JS classes
+.active {
+    display: block;
+}
+.shift_left {
+    position: relative;
+    left: -270px;
+}
+.targeted {
+    background-color: hsla(0,0%,100%,.05);
+}
+
+@media screen and (min-width:992px) {
+    .shift_left {
+        position: relative;
+        left: -350px;
+    }
+}
+
+
+
 
 
 

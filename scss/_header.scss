@@ -1,5 +1,9 @@
+.header {
+    z-index: 2;
+}
 .header_1 {
-    padding: 20px 15px;   
+    padding: 20px 15px; 
+    background-color: #fff;  
 }
 .net_logo {
     max-width: 100%;
@@ -15,8 +19,12 @@
     &:hover {
         background-color: #22242e;
     }
-    
-
+}
+.burger {
+    display: none;
+}
+.cross {
+    display: none;
 }
 .phone:hover {
     border-bottom: 3px solid black;
@@ -39,8 +47,9 @@ header .search_1 {
     border: 2px solid rgba(0,0,0,.1);
     transition: none;
     height: 33px;
-    width: 100%;
-    padding: 5px 40px 5px 15px;  
+    width: -webkit-fill-available;
+    padding: 5px 40px 5px 15px; 
+    margin-top: 5px; 
 }
 header .search_2 {
     height: 44px;
@@ -81,11 +90,9 @@ header .search_2 {
 .search_icon_2 {
     outline: none;
     padding: 11px 20px 8px;
-    //height: 46px;
     font-size: 1.063rem;
     border-radius: 0 3px 3px 0;
     border: none;
-    //vertical-align: bottom;
     background-color: #999aa2;
     color: #fff;
     cursor: pointer;
@@ -131,12 +138,6 @@ header .search_2 {
     text-decoration: none;
     line-height: 1;
     text-align: center;
-    // display menu when hovering on nav item
-    // &:hover {
-    //     & + .list_container {
-    //         display: block;
-    //     }       
-    // }
 }
 .nav_bar li .nav_item img {
     padding-bottom: 10px;
@@ -187,13 +188,6 @@ header .search_2 {
     left: 0;
     min-width: 100%;
     z-index: 10;
-    //menu display whne hovered over 
-    // &:hover {
-    //     display: block;
-    // }
-    // &:hover + .nav_item {
-    //     background-color: green;
-    // }
 }
 .list_menu {
     display: flex;
@@ -253,19 +247,10 @@ header .search_2 {
         cursor: pointer;
     }
 }
-// li:hover .nav_item_software {
-//     color: red;
-//   }
-//   .li .nav_item_software:hover,
-//   .li .nav_item_software:hover ~ .list_container_software {
-//     color: blue;
-//   }
+
 .list_container_software {
     background-color: #526781;
     display: none;
-    // &:hover + .nav_item_software {
-    //     background-color: #67809f;     
-    // } 
 }
 .list_container_support {
     background-color: #286abd;
