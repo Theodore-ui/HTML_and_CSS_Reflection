@@ -5,30 +5,24 @@
 
 //Header JS
 
-const body = document.querySelector('body');
 const header = document.querySelector('.header');
 let oldYPos = window.scrollY;
 let savedYPos;
 
 function toggleStickyHeader() {
-    // Grab the current y position and window width:
     let currentYPos = window.scrollY;
 
-    // Run checks and toggle sticky rules:
     if(currentYPos === 0 || (oldYPos + 10) < currentYPos){
-        // $($heroSection).removeAttr($style);
-        $($headerWrapper).removeClass('sticky()');
+        header.removeAttribute('style');
     } else if ((oldYPos - 10) > currentYPos) {
-        $('.header').sticky();
-        // adjustHeroSection();
+        $('header').sticky();
     }
-}
+
+    oldYPos = currentYPos;
+};
 
 window.addEventListener('scroll', toggleStickyHeader);
 
-// window.addEventListener('scroll', function () {
-//     $('.header').sticky();
-// });
 
 
 
@@ -38,18 +32,22 @@ const searchTwo = $('.search_2');
 const supportBtn = $('.btn_support');
 const contactBtn = $('.btn_contact');
 
+function showSearch () {
+    if (window.innerWidth > 992 && window.innerWidth < 1260) {
+        if (searchTwo.is(':visible')) {
+            searchTwo.fadeOut();
+            supportBtn.delay(400).fadeIn(); 
+            contactBtn.delay(400).fadeIn();
+        } else {
+            searchTwo.delay(400).fadeIn();
+            supportBtn.fadeOut(); 
+            contactBtn.fadeOut();
+        }
+    }
+}
 
-searchIconTwo.addEventListener('click', function () {
-    if (searchTwo.is(':visible')) {
-        searchTwo.fadeOut();
-        supportBtn.delay(400).fadeIn(); 
-        contactBtn.delay(400).fadeIn();
-    } else {
-        searchTwo.delay(400).fadeIn();
-        supportBtn.fadeOut(); 
-        contactBtn.fadeOut(); 
-    }   
-});
+searchIconTwo.addEventListener('click', showSearch);
+
 
 const cover = document.querySelector('.cover');
 const mainColumn = document.querySelector('.main_column'); 
@@ -67,7 +65,8 @@ function toggleSidemenu () {
         mainColumn.style.overflow = 'auto';
         cross.classList.add('active');
         burger.classList.remove('active');
-        cover.style.display = 'block';   
+        cover.style.display = 'block';
+        $('.cover').scrollTop(oldYPos);  
     } else {
         sideMenu.animate({width:'toggle'}, 400);
         mainColumn.classList.remove('shift_left');
