@@ -5,7 +5,33 @@
 
 //Header JS
 
-$('.header').sticky(); //sticky Header
+const body = document.querySelector('body');
+const header = document.querySelector('.header');
+let oldYPos = window.scrollY;
+let savedYPos;
+
+function toggleStickyHeader() {
+    // Grab the current y position and window width:
+    let currentYPos = window.scrollY;
+
+    // Run checks and toggle sticky rules:
+    if(currentYPos === 0 || (oldYPos + 10) < currentYPos){
+        // $($heroSection).removeAttr($style);
+        $($headerWrapper).removeClass('sticky()');
+    } else if ((oldYPos - 10) > currentYPos) {
+        $('.header').sticky();
+        // adjustHeroSection();
+    }
+}
+
+window.addEventListener('scroll', toggleStickyHeader);
+
+// window.addEventListener('scroll', function () {
+//     $('.header').sticky();
+// });
+
+
+
 
 const searchIconTwo = document.querySelector('.search_icon_2');
 const searchTwo = $('.search_2');
@@ -25,30 +51,37 @@ searchIconTwo.addEventListener('click', function () {
     }   
 });
 
-
+const cover = document.querySelector('.cover');
 const mainColumn = document.querySelector('.main_column'); 
 const sideMenu = $('.sidemenu');
-const burgerBtn = document.querySelector('.burger_button');
 const burger = document.querySelector('.burger'); 
 const cross = document.querySelector('.cross');
-const cover = $('.cover');
+const burgerBtn = document.querySelector('.burger_button');
+const greyCover = document.querySelector('.greyed_out')
 
-burgerBtn.addEventListener('click', function () {
-    if (sideMenu.is(':visible')) {
-        sideMenu.animate({width:'toggle'}, 400);
-        mainColumn.classList.remove('shift_left');  
-        cross.classList.remove('active');
-        burger.classList.add('active');
-        cover.classList.remove('greyed_out');
-    } else {
-        sideMenu.animate({width:'toggle'}, 400);
+function toggleSidemenu () {
+    if (sideMenu.is(':hidden')) {
+        sideMenu.animate({width:'toggle'}, 400); 
         mainColumn.classList.add('shift_left'); 
+        mainColumn.style.height = '100vh';
+        mainColumn.style.overflow = 'auto';
         cross.classList.add('active');
         burger.classList.remove('active');
-        cover.classList.add('greyed_out');
-        // mainColumn.scrollTop(0);
-    }   
-});
+        cover.style.display = 'block';   
+    } else {
+        sideMenu.animate({width:'toggle'}, 400);
+        mainColumn.classList.remove('shift_left');
+        mainColumn.removeAttribute('style');  
+        cross.classList.remove('active');
+        burger.classList.add('active'); 
+        cover.removeAttribute('style');   
+    }
+}
+
+cover.addEventListener('click', toggleSidemenu);
+
+burgerBtn.addEventListener('click', toggleSidemenu);
+
 
 const cookiePop = $('.cookie_pop');
 const cookieBnt = $('.cookie_btn');
