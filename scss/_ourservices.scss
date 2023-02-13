@@ -27,73 +27,145 @@
     bottom: 0;
     left: 0;
     transition: .5s ease;
-    box-shadow: 0 3px 35px rgb(0, 0, 0 / 10%);
+    box-shadow: 0 3px 35px rgb(0, 0, 0/ 10%);
+    & i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        line-height: 62px;
+        color: #fff;
+    }
+    &:hover i {
+        background-color: #fff;
+    } 
     & .btn {
         @include small_btn;
+        display: inline-block;
     }
 }
 
-.our_services_card_software:hover {
-    background-color: #67809f;
-    border-color: transparent;
-    top: -10px;
-    .btn_software {
-        color: #67809f;
-        background-color: #fff;     
+.our_services_card_software {
+    & i {
+        background-color: #4183d7;
+    }
+    &:hover {
+        background-color: #67809f;
+        border-color: transparent;
+        top: -10px;
+        & i {
+            background-color: #67809f;
+        }
+        .btn_software {
+            color: #67809f;
+            background-color: #fff;     
+        }
     }
 }
-.our_services_card_suport:hover {
-    background-color: #4183d7;
-    border-color: transparent;
-    top: -10px;
-    .btn_suport {
-        color: #4183d7;
-        background-color: #fff;     
+.our_services_card_suport {
+    & i {
+        background-color: #4183d7;
+    }
+    &:hover {
+        background-color: #4183d7;
+        border-color: transparent;
+        top: -10px;
+        & i {
+            background-color: #4183d7;
+        }
+        .btn_suport {
+            color: #4183d7;
+            background-color: #fff;     
+        }
     }
 }
-.our_services_card_marketing:hover {
-    background-color: #2ecc71;
-    border-color: transparent;
-    top: -10px;
-    .btn_marketing {
-        color: #2ecc71;
-        background-color: #fff;    
+.our_services_card_marketing {
+    & i {
+        background-color: #2ecc71;
+    }
+    &:hover {
+        background-color: #2ecc71;
+        border-color: transparent;
+        top: -10px;
+        & i {
+            background-color: #2ecc71;
+        }
+        .btn_marketing {
+            color: #2ecc71;
+            background-color: #fff;    
+        }
     }
 }
-.our_services_card_telecoms:hover {
-    background-color: #d64541;
-    border-color: transparent;
-    top: -10px;
-    .btn_telecoms {
-        color: #d64541;
-        background-color: #fff;    
+.our_services_card_telecoms {
+    & i {
+        background-color: #d64541;
+    }
+    &:hover {
+        background-color: #d64541;
+        border-color: transparent;
+        top: -10px;
+        & i {
+            background-color: #d64541;
+        }
+        .btn_telecoms {
+            color: #d64541;
+            background-color: #fff;    
+        }
     }
 }
-.our_services_card_design:hover {
-    background-color: #926fb1;
-    border-color: transparent;
-    top: -10px;
-    .btn_design {
-        color: #926fb1;
-        background-color: #fff;     
+.our_services_card_design {
+    & i {
+        background-color: #926fb1;
+    }
+    &:hover {
+        background-color: #926fb1;
+        border-color: transparent;
+        top: -10px;
+        & i {
+            background-color: #926fb1;
+        }
+        .btn_design {
+            color: #926fb1;
+            background-color: #fff;     
+        }
+        }
+}
+.our_services_card_security {
+    & i {
+        background-color: #f62459;
+    }
+    &:hover {
+        background-color: #f62459;
+        border-color: transparent;
+        top: -10px;
+        & i {
+            background-color: #f62459;
+        }
+        .btn_security {
+            color: #f62459;
+            background-color: #fff;    
+        }
     }
 }
-.our_services_card_security:hover {
-    background-color: #f62459;
-    border-color: transparent;
-    top: -10px;
-    .btn_security {
-        color: #f62459;
-        background-color: #fff;    
+.our_services_card_training {
+    & i {
+        background-color: #ce4125;
     }
-}
-.our_services_card_training:hover {
-    background-color: #ce4125;
-    border-color: transparent;
-    top: -10px;
-    .btn_training {
-        color: #ce4125;
-        background-color: #fff;     
+    &:hover {
+        background-color: #ce4125;
+        border-color: transparent;
+        top: -10px;
+        .btn_training {
+            color: #ce4125;
+            background-color: #fff;     
+        }
+        & i {
+            color: #ce4125;
+        }
     }
 }
 .our_services_card i {

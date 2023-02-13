@@ -171,44 +171,120 @@ header .search_2 {
     padding-bottom: 10px;
 }
 .nav_bar li .nav_item small {
+    display: block;
+    font-size: .625rem;
     padding-bottom: 1px;
 }
 
 .list_nav_item:hover > div {
     display: block;
 }
-.lni_software:hover > a {
-    background-color: #67809f;
+
+.lni_software {
+    & i {
+        color: #67809f;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #67809f;
+        & i {
+            color: #fff;
+        }
+        &:before {
+            @include nav_arrow;
+            border-color: #67809f transparent transparent;
+        }
+    }
+}
+.list_nav_item:hover > a {
+    & i {
+        color: #fff;
+    }
+    &:before {
+        @include nav-arrow;
+    }
 }
  
-.lni_support:hover > a {
-    background-color: #4183d7;
- 
+.lni_support {
+    & i {
+        color: #4183d7;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #4183d7;
+        &:before {  
+            border-color: #4183d7 transparent transparent;
+        }
+    }
 }
-.lni_marketing:hover > a {
-    background-color: #2ecc71;
+.lni_marketing {
+    & i {
+        color: #2ecc71;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #2ecc71;
+        &:before {
+            border-color: #2ecc71 transparent transparent;
+        }
+    }
 }
-.lni_telecoms:hover > a {
-    background-color: #d64541;   
+.lni_telecoms {
+    & i {
+        color: #d64541;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #d64541; 
+        &:before {
+            border-color: #d64541 transparent transparent;
+        } 
+    }
 }
-.triangle {
-    width: 200px;
-    height: 200px;
-    background: pink;
+.lni_design {
+    & i {
+        color: #926fb1;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #926fb1;
+        &:before {
+            border-color: #926fb1 transparent transparent;
+        }
+    }
+}
+.lni_cyber {
+    & i {
+        color: #f62459;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #f62459;
+        &:before {
+            border-color: #f62459 transparent transparent;
+        }
+    }
 }
 
-.lni_design:hover > a {
-    background-color: #926fb1;
+.lni_developer {
+    & i {
+        color: #ce4125;
+    }
+    &:hover > a {
+        position: relative;
+        display: block;
+        background-color: #ce4125;
+        &:before {
+            border-color: #ce4125 transparent transparent;
+        }
+   }
 }
-
-.lni_cyber:hover > a {
-    background-color: #f62459;
-}
-
-.lni_developer:hover > a {
-    background-color: #ce4125;
-}
-
 .list_container {
     margin: 0;
     position: absolute;
@@ -231,7 +307,11 @@ header .search_2 {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 970px;    
+    width: 970px; 
+    i {
+        margin-right: 10px;
+        color: #fff;
+    }   
 }
 .list_menu .list_menu_item {
     width: 33%;
@@ -270,9 +350,9 @@ header .search_2 {
     color: #fff;
     font-size: 1.2rem;
     line-height: 1.313rem;
-    &:hover {
-        text-decoration: 2px underline;
-        cursor: pointer;
+    cursor: pointer;
+    &:hover > span {
+        text-decoration: 1px underline; 
     }
 }
 
@@ -377,6 +457,9 @@ header .search_2 {
     }
     .nav_bar li .nav_item {
         width: 167.137px;
+    }
+    .list_nav_item:hover > a:before {
+        border-width: 35px 83.5px 0;
     }
     .phone {
         display: none;

@@ -8,7 +8,8 @@
 .latest_news_card {
     margin: 30px 15px 0 15px;
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: -webkit-fill-available;
     transition: .5s ease;
     position: relative;
@@ -29,6 +30,9 @@
     border-radius: 0 0 3px 3px;
     flex-grow: 720px;
     box-shadow: 0 3px 35px rgb(0, 0, 0 / 10%);
+    .btn {
+        @include small_btn;
+    }
 }
 .latest_news_card img {
     object-fit: cover;
@@ -36,13 +40,13 @@
     height: 100%;
 }
 .img_tool_tip {
+    
     display: block;
-    height: auto;
 }
 .img_tool_tip .tool_tip {
     color: #fff;
     text-decoration: none;
-    position: relative;
+    position: absolute;
     top: 10px;
     right: 0;
     display: block;

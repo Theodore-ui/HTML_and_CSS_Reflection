@@ -1,4 +1,48 @@
 
+//mixins 
+
+@import "mixins";
+
+//header
+
+@import "header";
+
+// cyber security
+
+@import "cybersecurity";
+
+// companies2
+
+@import "companies2";
+
+// Our services
+
+@import "ourservices";
+
+// intro
+
+@import "intro";
+
+// companies 1
+
+@import "companies1";
+
+// latest news
+
+@import "latestnews";
+
+//Email Newsletter Sign-Up
+
+@import "newsletter";
+
+//footer styling
+
+@import "footer";
+
+//Side menu
+
+@import "side_menu";
+
 .cover {
     position: fixed;
     z-index: 3;
@@ -140,9 +184,7 @@ body {
     }
 }
 
-//mixins 
 
-@import "mixins";
 
 //header
 
@@ -183,6 +225,10 @@ body {
 //Side menu
 
 @import "side_menu";
+
+//mixins 
+
+@import "mixins";
 
 // JS classes
 .active {
