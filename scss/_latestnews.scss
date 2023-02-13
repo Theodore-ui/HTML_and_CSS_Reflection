@@ -9,11 +9,15 @@
     margin: 30px 15px 0 15px;
     width: 100%;
     display: block;
-    position: relative;
     width: -webkit-fill-available;
+    transition: .5s ease;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     &:hover {
         top: -10px;
-        transition: .5s ease;
     }
 }
 
@@ -24,24 +28,26 @@
     border-right: 1px solid #ccc;
     border-radius: 0 0 3px 3px;
     flex-grow: 720px;
+    box-shadow: 0 3px 35px rgb(0, 0, 0 / 10%);
 }
 .latest_news_card img {
     object-fit: cover;
     width: 100%;
+    height: 100%;
 }
 .img_tool_tip {
-    position: relative; 
     display: block;
+    height: auto;
 }
 .img_tool_tip .tool_tip {
     color: #fff;
     text-decoration: none;
-    position: absolute;
+    position: relative;
     top: 10px;
     right: 0;
     display: block;
     font-weight: 600;
-    padding: 0 10px;
+    padding: 3px 10px;
     font-size: .75rem;
     &:hover {
         text-decoration: underline;

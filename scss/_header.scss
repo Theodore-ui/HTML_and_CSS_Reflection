@@ -10,24 +10,36 @@
     margin-right: 15px;
 }
 .burger_button {
+    @include btn;
+    padding: 12px 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 15px;
     background-color: #333645;
-    padding: 10px 15px; 
-    border-radius: 3px;
-    cursor: pointer;
-    border: none;
     &:hover {
         background-color: #22242e;
     }
+    & i {
+        font-size: 33px;
+    }
 }
-.burger {
-    display: none;
-}
+// .burger:before {
+//     // display: none;
+// }
 .cross {
     display: none;
+    &:before {
+        display: none;
+    }
 }
-.phone:hover {
-    border-bottom: 3px solid black;
+.phone {
+    font-size: 28px;
+    color: #333645;
+    &:hover {
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
 }
 .header_1 .row {
     display: flex;
@@ -45,11 +57,16 @@ header .search_1 {
     background-color: rgba(0,0,0,.1);
     outline: 1px solid hsla(0,0%,100%,.2);
     border: 2px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgb(0, 0, 0 / 8%); 
     transition: none;
     height: 33px;
     width: -webkit-fill-available;
     padding: 5px 40px 5px 15px; 
-    margin-top: 5px; 
+    margin-top: 5px;
+    &:focus {
+        box-shadow: 0 0 3px #fff;      
+    } 
 }
 header .search_2 {
     height: 44px;
@@ -58,8 +75,10 @@ header .search_2 {
     border: 1px solid #e5e5e5;
     border-radius: 0;
     width: 174px;
+    transition: border-color .15s ease;
     &:focus {
         border-color: #5bc0de;
+        box-shadow: 0 0 8px #5bc0de;
         outline: 0;
     }  
 }  
@@ -83,36 +102,42 @@ header .search_2 {
     border: none;
     background: none;
     right: 3px;
-    bottom: 3px;
+    bottom: 20%;
     font-size: 20px;
+    color:#333645;
     cursor: pointer;
 }
 .search_icon_2 {
-    outline: none;
-    padding: 11px 20px 8px;
-    font-size: 1.063rem;
+    @include btn;
+    padding: 7px 20px 3px;
     border-radius: 0 3px 3px 0;
-    border: none;
     background-color: #999aa2;
-    color: #fff;
-    cursor: pointer;
     &:hover {
         background-color: #7e808a;    
     }
+    & i {
+        font-size: 25px;
+    }
 }
 .btn_support {
+    @include btn;
     background-color: #4183d7;
-    padding: 10px 15px;
     &:hover {
         background-color: #2a6ec6
     }
+    & i {
+        margin-right: 5px;
+    }
 }
 .btn_contact {
+    @include btn;
     background-color: #999aa2;
     margin: 0 20px;
-    padding: 10px 15px;
     &:hover {
         background-color: #84858f;    
+    }
+    & i {
+        margin-right: 5px;
     }
 }
 .header_2 {
@@ -138,6 +163,9 @@ header .search_2 {
     text-decoration: none;
     line-height: 1;
     text-align: center;
+    & i {
+        padding-bottom: 10px;
+    }
 }
 .nav_bar li .nav_item img {
     padding-bottom: 10px;

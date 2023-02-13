@@ -34,8 +34,10 @@ form input {
     padding: 5px 15px;
     border: 1px solid #ccc;
     border-radius: 2px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     &:focus {
         border-color: #5bc0de;
+        box-shadow: 0 0 8px #5bc0de;
         outline: 0;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }  

@@ -1,6 +1,4 @@
-// html::-webkit-scrollbar {
-//     display: none;
-// }
+
 .cover {
     position: fixed;
     z-index: 3;
@@ -15,9 +13,7 @@
     cursor: pointer; 
     background-color: rgba(0,0,0,0.5);
 }
-// .main_column {
-//     overflow: scroll;
-// }
+
 header {
     box-sizing: border-box;
 }
@@ -45,6 +41,8 @@ form, :after, :before {
 .sidemenu {
     box-sizing: border-box;
 }
+
+
 
 //body Styling
 
@@ -95,14 +93,6 @@ body {
 .section_container {
     padding: 50px 15px;
 }
-.btn {
-    text-decoration: none;
-    font-weight: 400;
-    line-height: 35px;
-    padding: 15px;
-    border-radius: 3px;
-    color: #fff;    
-}
 .btn_medium {
     text-decoration: none;
     font-weight: 400;
@@ -150,6 +140,9 @@ body {
     }
 }
 
+//mixins 
+
+@import "mixins";
 
 //header
 

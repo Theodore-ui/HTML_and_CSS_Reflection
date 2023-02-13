@@ -39,6 +39,7 @@ picture img {
     }   
 }
 //slick styles
+
 .slick-dots {
     bottom: 30px;
 }
@@ -54,9 +55,14 @@ picture img {
 }
 
 @media screen and (min-width: 992px) {
+    .cyber_security {
+        display: flex;
+        justify-content: left;
+    }
     .img_overlay {
+        width: -webkit-fill-available;
         text-align: left;
-        left: 30%;
+        left: 36%;
     }
     .img_overlay .h1 {
         font-size: 4rem;
