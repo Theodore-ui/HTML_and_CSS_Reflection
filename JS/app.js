@@ -49,6 +49,7 @@ function showSearch () {
 searchIconTwo.addEventListener('click', showSearch);
 
 
+ 
 const cover = document.querySelector('.cover');
 const mainColumn = document.querySelector('.main_column'); 
 const sideMenu = $('.sidemenu');

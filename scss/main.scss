@@ -85,6 +85,13 @@ form, :after, :before {
 .sidemenu {
     box-sizing: border-box;
 }
+form, :after, :before {
+    box-sizing: border-box;
+}
+form {
+    box-sizing: border-box;
+}
+
 
 
 
@@ -137,25 +144,7 @@ body {
 .section_container {
     padding: 50px 15px;
 }
-.btn_medium {
-    text-decoration: none;
-    font-weight: 400;
-    line-height: 35px;
-    padding: 20px;
-    border-radius: 3px;
-    color: #fff;
-    overflow: auto;    
-}
-.btn_big {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 35px;
-    padding: 18px 30px;
-    border-radius: 3px;
-    color: #fff;
-    text-align: center;    
-}
+
 .view_all {   
     text-decoration: none;
     font-size: 1.625rem;
@@ -186,49 +175,6 @@ body {
 
 
 
-//header
-
-@import "header";
-
-// cyber security
-
-@import "cybersecurity";
-
-// companies2
-
-@import "companies2";
-
-// Our services
-
-@import "ourservices";
-
-// intro
-
-@import "intro";
-
-// companies 1
-
-@import "companies1";
-
-// latest news
-
-@import "latestnews";
-
-//Email Newsletter Sign-Up
-
-@import "newsletter";
-
-//footer styling
-
-@import "footer";
-
-//Side menu
-
-@import "side_menu";
-
-//mixins 
-
-@import "mixins";
 
 // JS classes
 .active {

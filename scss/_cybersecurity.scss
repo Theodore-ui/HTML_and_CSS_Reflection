@@ -1,12 +1,42 @@
-.cyber_security {
+.slide {
     position: relative;
     text-align: center;
+    .btn {
+        @include btn;
+        font-size: 1.25rem;
+        margin-top: 12.8px; 
+        margin-bottom: 18px;   
+    }
+}
+.btn_east {
+    background-color: #926fb1;
+    &:hover {
+        background-color: #7e57a0;
+    }
+}
+.btn_software:hover {
+    background-color: #526781;
+}
+.btn_support:hover {
+    background-color: #286abd;
+}
+.btn_marketing:hover {
+    background-color: #25a25a;
+}
+.btn_telecoms:hover {
+    background-color: #bc2c28;;
+}
+.btn_design:hover {
+    background-color: #79539a;;
+}
+.btn_security:hover {
+    background-color: #de093f;
 }
 picture img {
     object-fit: cover;
     height: 550px;
     width: 100%;
-    filter: brightness(50%);      
+    background: linear-gradient(270deg,transparent 25%,#000);      
 }
 .img_overlay {
     display: block;
@@ -17,7 +47,7 @@ picture img {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.cyber_security .h1 {
+.slides .h1 {
     font-weight: 600;
     font-size: 2.5rem;
     line-height: 3rem;
@@ -29,15 +59,7 @@ picture img {
     line-height: 1.75rem;
     font-weight: 600;
 }
-.btn_find_out_more {
-    font-size: 1.25rem;
-    background-color: #f62459;
-    margin-top: 60px; 
-    margin-bottom: 18px;
-    &:hover {
-        background-color: #e80a42;
-    }   
-}
+
 //slick styles
 
 .slick-dots {

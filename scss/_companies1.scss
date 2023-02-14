@@ -1,5 +1,5 @@
 .companies_1 {
-    margin: 50px 15px 0 15px;
+    padding: 100px 15px 0 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,12 +7,12 @@
 }
 .description {
     display: none;
-    // position: absolute;
+    position: absolute;
     bottom: 100%;
-    // left: -200px;
-    // right: -200px;
+    left: -200px;
+    right: -200px;
     text-align: center;
-    z-index: 10;
+    z-index: 2;
 }
 .box { 
     background-color: #333645;
@@ -30,6 +30,18 @@
         margin: 0 0 11px; 
         font-weight: 400;   
         line-height: 1.1;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 28px;
+            height: 3px;
+            display: block;
+            background-color: #fff;
+        }
     } 
     & p {
         font-size: .8125rem;
@@ -41,15 +53,21 @@
         position: absolute;
         bottom: 10px;
         left: 50%;
-        margin-left: -36px;    
+        margin-left: -36px; 
+        &:after {
+            content: "";
+            margin: auto;
+            display: inline-block;
+            border-color: #333645 transparent transparent;
+            border-style: solid;
+            border-width: 35px 36px 0;    
+        }   
     } 
 }
 .scroll_1 {
-    object-fit: cover;
     padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    vertical-align: middle;
+    position: relative;
     &:hover > .description {
         display: block;
     }
