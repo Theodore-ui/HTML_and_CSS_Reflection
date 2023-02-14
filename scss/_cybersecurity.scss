@@ -32,11 +32,21 @@
 .btn_security:hover {
     background-color: #de093f;
 }
-picture img {
-    object-fit: cover;
-    height: 550px;
-    width: 100%;
-    background: linear-gradient(270deg,transparent 25%,#000);      
+picture {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(270deg,transparent 25%,#000);
+    }
+    & img {
+        object-fit: cover;
+        height: 550px;
+        width: 100%;     
+    }
 }
 .img_overlay {
     display: block;

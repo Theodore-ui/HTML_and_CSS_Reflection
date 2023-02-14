@@ -109,7 +109,7 @@ form {
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 3;
     & p {
         padding-right: 15px;
         margin: 0;
@@ -179,6 +179,11 @@ body {
 // JS classes
 .active {
     display: block;
+}
+.active_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .shift_left {
     position: relative;

@@ -64,16 +64,16 @@ function toggleSidemenu () {
         mainColumn.classList.add('shift_left'); 
         mainColumn.style.height = '100vh';
         mainColumn.style.overflow = 'auto';
-        cross.classList.add('active');
-        burger.classList.remove('active');
+        cross.classList.add('active_2');
+        burger.classList.remove('active_2');
         cover.style.display = 'block';
         $('.cover').scrollTop(oldYPos);  
     } else {
         sideMenu.animate({width:'toggle'}, 400);
         mainColumn.classList.remove('shift_left');
         mainColumn.removeAttribute('style');  
-        cross.classList.remove('active');
-        burger.classList.add('active'); 
+        cross.classList.remove('active_2');
+        burger.classList.add('active_2'); 
         cover.removeAttribute('style');   
     }
 }
@@ -89,6 +89,20 @@ const cookieBnt = $('.cookie_btn');
 cookieBnt.click(function () {
     cookiePop.animate({width:'toggle'}, 350);    
 });
+
+const checkBox = document.querySelector('.checkbox_outter');
+const tick = document.querySelector('.action');
+
+function showTick () {
+    if (tick.classList.contains('active_2')) {
+        tick.classList.remove('active_2');
+    } else {
+        tick.classList.add('active_2');   
+    }
+}
+
+checkBox.addEventListener('click', showTick);
+
 
 
 

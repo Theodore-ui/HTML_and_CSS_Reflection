@@ -29,7 +29,7 @@
     border-right: 1px solid #ccc;
     border-radius: 0 0 3px 3px;
     flex-grow: 720px;
-    box-shadow: 0 3px 35px rgb(0, 0, 0 / 10%);
+    box-shadow: 0 3px 35px rgba(0, 0, 0 , 0.1);
     .btn {
         @include small_btn;
     }
@@ -40,7 +40,7 @@
     height: 100%;
 }
 .img_tool_tip {
-    
+    z-index: 2;
     display: block;
 }
 .img_tool_tip .tool_tip {
