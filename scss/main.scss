@@ -31,10 +31,6 @@
 
 @import "latestnews";
 
-//Email Newsletter Sign-Up
-
-@import "newsletter";
-
 //footer styling
 
 @import "footer";
@@ -42,6 +38,10 @@
 //Side menu
 
 @import "side_menu";
+
+//Email Newsletter Sign-Up
+
+@import "newsletter";
 
 .cover {
     position: fixed;
