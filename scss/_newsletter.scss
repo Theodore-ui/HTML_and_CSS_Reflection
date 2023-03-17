@@ -1,7 +1,8 @@
+
 form {
     color:#333645;
     background-color: #DDDDDD;
-    & .btn {
+    & .form_btn {
         @include small_btn;
         height: auto;
         border: none;
@@ -37,7 +38,7 @@ form label {
 .side_label {
     line-height: 32px;   
 }
-form input {
+form .form-control {
     margin-bottom: 15px;
     width: -webkit-fill-available;
     height: 35px;

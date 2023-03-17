@@ -61,3 +61,8 @@
         border-width: 35px 83.5px 0;
     }
 }
+
+@mixin centre_above {
+    margin: 0 auto 0 auto;
+    max-width: 910px; 
+}

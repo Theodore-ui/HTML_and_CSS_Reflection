@@ -7,10 +7,10 @@
                     <i class="fa-solid fa-computer-mouse"></i>
                     SUPPORT
                 </button>
-                <button class="btn_contact btn" type="button">
+                <a href="contact.php" class="btn_contact btn" type="button">
                     <i class="fa-regular fa-paper-plane"></i>
                     CONTACT
-                </button>
+                </a>
                 <div class="search_search_icon_2">
                     <input class="search_2" type="text" name="search" placeholder="Search...">
                     <button type="submit" class="search_icon_2"><i class="fa-solid fa-magnifying-glass"></i></button>

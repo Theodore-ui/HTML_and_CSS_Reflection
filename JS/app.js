@@ -32,7 +32,7 @@ const searchTwo = $('.search_2');
 const supportBtn = $('.btn_support');
 const contactBtn = $('.btn_contact');
 
-function showSearch () {
+function showSearch() {
     if (window.innerWidth > 992 && window.innerWidth < 1260) {
         if (searchTwo.is(':visible')) {
             searchTwo.fadeOut();
@@ -58,7 +58,7 @@ const cross = document.querySelector('.cross');
 const burgerBtn = document.querySelector('.burger_button');
 const greyCover = document.querySelector('.greyed_out')
 
-function toggleSidemenu () {
+function toggleSidemenu() {
     if (sideMenu.is(':hidden')) {
         sideMenu.animate({width:'toggle'}, 400); 
         mainColumn.classList.add('shift_left'); 
@@ -93,7 +93,7 @@ cookieBnt.click(function () {
 const checkBox = document.querySelector('.checkbox_outter');
 const tick = document.querySelector('.action');
 
-function showTick () {
+function showTick() {
     if (tick.classList.contains('active_2')) {
         tick.classList.remove('active_2');
     } else {
@@ -103,6 +103,23 @@ function showTick () {
 
 checkBox.addEventListener('click', showTick);
 
+//conatct page 
+
+//info drop down menu
+
+const dropper = document.querySelector('.support_dropper');
+const dropdownMenu = $('.support_dropdown');
+
+function displayDropMenu() {
+    if (dropdownMenu.is(':hidden')) {
+        dropdownMenu.slideDown(800);
+
+    } else {
+        dropdownMenu.slideUp(800);   
+    }
+}
+
+dropper.addEventListener('click', displayDropMenu);
 
 
 
