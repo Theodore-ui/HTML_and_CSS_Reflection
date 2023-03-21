@@ -1,3 +1,4 @@
+<?php include('functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,25 +21,80 @@
         <div class="page_head">
             <h2 class="page_header">Our Offices</h2>
         </div>
-        <main>
+        <main class="contact_main">
             <div class="office_cards_container">
                 <div class="office_card">
-                    <img class="office_img">
-                    <div class="office_description">
-                        <a class="office_title"></a>    
-                        <ul class="office_address">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <a class="office_number"></a>
-                        <a class="office_btn">VIEW MORE</a>
+                    <div class="office_card_top">
+                        <img class="office_img" src="https://www.netmatters.co.uk/assets/images/offices/london.jpg" alt="London office">
+                        <div class="office_description">
+                            <a href="#" class="office_title">London Office</a>    
+                            <ul class="office_address">
+                                <li>Unit G6,</li>
+                                <li>Pixel Business Centre,</li>
+                                <li>110 Brooker Road, Waltham Abbey,</li>
+                                <li>London,</li>
+                                <li>EN9 1JH</li>
+                            </ul>
+                            <a href="#" class="office_number">02045 397354</a>
+                            <a href="#" class="office_btn">VIEW MORE</a>
+                        </div>
                     </div>
-                    <img class="office_map">
-                </div>    
+                    <img class="office_map" src="images/london_map.png">
+                </div>
+                <div class="office_card">
+                    <div class="office_card_top">
+                        <img class="office_img" src="https://www.netmatters.co.uk/assets/images/offices/cambridge.jpg" alt="Cambridge office">
+                        <div class="office_description">
+                            <a href="#" class="office_title">Cambridge Office</a>    
+                            <ul class="office_address">
+                                <li>Unit 1.31,</li>
+                                <li>St John's Innovation Centre,</li>
+                                <li>Cowley Road, Milton,</li>
+                                <li>Cambridge,</li>
+                                <li>CB4 0WS</li>
+                            </ul>
+                            <a href="#" class="office_number">01223 37 57 72</a>
+                            <a href="#" class="office_btn">VIEW MORE</a>
+                        </div>
+                    </div>
+                    <img class="office_map" src="images/cambridge_map.png" alt="Cambridge office map">
+                </div>
+                <div class="office_card">
+                    <div class="office_card_top">
+                        <img class="office_img" src="https://www.netmatters.co.uk/assets/images/offices/wymondham.jpg" alt="Wymondham office">
+                        <div class="office_description">
+                            <a href="#" class="office_title">Wymondham Office</a>    
+                            <ul class="office_address">
+                                <li>Unit 15,</li>
+                                <li>Penfold Drive,</li>
+                                <li>Gateway 11 Business Park,</li>
+                                <li>Wymondham, Norfolk,</li>
+                                <li>NR18 0WZ</li>
+                            </ul>
+                            <a href="#" class="office_number">01603 70 40 20</a>
+                            <a href="#" class="office_btn">VIEW MORE</a>
+                        </div>
+                    </div>
+                    <img class="office_map" src="images/Wymondham_map.png" alt="Wymondham office map">
+                </div>
+                <div class="office_card">
+                    <div class="office_card_top">
+                        <img class="office_img" src="https://www.netmatters.co.uk/assets/images/offices/yarmouth-2.jpg" alt="Yarmouth office">
+                        <div class="office_description">
+                            <a href="#" class="office_title">Great Yarmouth Office</a>    
+                            <ul class="office_address">
+                                <li>Suite F23,</li>
+                                <li>Beacon Innovation Centre,</li>
+                                <li>Beacon Park, Gorleston,</li>
+                                <li>Great Yarmouth, Norfolk,</li>
+                                <li>NR31 7RA</li>
+                            </ul>
+                            <a href="#" class="office_number">01493 60 32 04</a>
+                            <a href="#" class="office_btn">VIEW MORE</a>
+                        </div>
+                    </div>
+                    <img class="office_map" src="images/Wymondham_map.png" alt="Yarmouth office map">
+                </div>     
             </div>
             <div class="info_form">
                 <div class="info">
@@ -57,34 +113,70 @@
                         <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp; voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;</p>
                     </div>
                 </div>
-                <form class="Large_form" method="POST" action="https://www.netmatters.co.uk/enquiry#contact-form" accept-charset="UTF-8" id="contact-form" novalidate="novalidate">
+                <form class="Large_form" method="POST" accept-charset="UTF-8" id="contact-form" novalidate="novalidate">
                     <div class="input_group">
                         <div class="form-group left_child">
                             <label for="name" class="required">Your Name</label>
-                            <input class="form-control" name="name" type="text" value="" id="name">
+                            <input class="form-control" name="name" type="text" value="<?php if (isset($_POST['submit_info']) && $is_errors) {echo $_POST["name"];} ?>" id="name">
+                            <?php 
+                            if(!empty($name_error)) {
+                                echo $name_error;
+                            } else {
+                                echo "<br/><br/>";
+                            }
+                            ?>
                         </div>
                         <div class="form-group">
                             <label for="company" class="">Company Name</label>
-                            <input class="form-control" name="company" type="text" value="" id="company">
+                            <input class="form-control" name="company" type="text" value="<?php if (isset($_POST['submit_info']) && $is_errors) {echo $_POST["company"];} ?>" id="company">
                         </div>
                     </div>
                     <div class="input_group">
                         <div class="form-group left_child">
                             <label for="email" class="required">Your Email</label>
-                            <input class="form-control" name="email" type="email" value="" id="email">
+                            <input class="form-control" name="email" type="email" value="<?php if (isset($_POST['submit_info']) && $is_errors) {echo $_POST["email"];} ?>" id="email">
+                            <?php 
+                            if(!empty($email_error)) {
+                                echo $email_error;
+                            } else {
+                                echo "<br/><br/>";
+                            }
+                            ?>
                         </div>
                         <div class="form-group">
                             <label for="telephone" class="required">Your Telephone Number</label>
-                            <input class="form-control" name="telephone" type="text" value="" id="telephone">
+                            <input class="form-control" name="telephone" type="text" value="<?php if (isset($_POST['submit_info']) && $is_errors) {echo $_POST["telephone"];} ?>" id="telephone">
+                            <?php 
+                            if(!empty($telephone_error)) {
+                                echo $telephone_error;
+                            } else {
+                                echo "<br/><br/>";
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="subject" class="required">Subject</label>
-                        <input class="form-control" name="subject" type="text" value="Train For A Career In Tech" id="subject">
+                        <input class="form-control" name="subject" type="text" value="<?php if (isset($_POST['submit_info']) && $is_errors) {echo $_POST["subject"];} ?>" id="subject">
+                        <?php 
+                        if(!empty($subject_error)) {
+                            echo $subject_error;
+                        } else {
+                            echo "<br/><br/>";
+                        }
+                        ?>
                     </div>
                     <div class="form-group">
                         <label for="message" class="required">Message</label>
-                        <textarea class="form-control" name="message" cols="50" rows="10" id="message"></textarea>
+                        <textarea class="form-control message-area" name="message" cols="50" rows="10" value="" id="message"><?php if (isset($_POST['submit_info']) && $is_errors) {echo $_POST["message"];} ?>
+                        </textarea>
+                        <?php 
+                        if(!empty($message_error)) {
+                            echo $message_error;
+                        } else {
+                            echo "<br/><br/>";
+                        }
+                        ?>
                     </div>
                     <div class="checkbox_note">
                         <span class="checkbox_outter">
@@ -97,9 +189,16 @@
                         for more information on how we keep your data safe.</label>
                     </div>
                     <div class="action-block">
-                        <button name="submit" class="btn btn-web">
+                        <button name="submit_info" class="btn btn-web" type="submit" value="send">
                             SEND ENQUIRY
                         </button>
+                        <?php 
+                        if(!empty($success_message)) {
+                            echo $success_message;
+                        } else {
+                            echo "<br/><br/>";
+                        }
+                        ?>
                         <small class="helper-text"><span class="text-danger">*</span> Fields Required</small>    
                     </div>
                 </form>

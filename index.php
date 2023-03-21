@@ -351,7 +351,7 @@
                     <div class="latest_news_card_container">
                         <?php 
                             include('functions.php');
-                            display_news_pods();
+                            display_news_items();
                         ?> 
                     </div>
                     <div class="view_all_container">

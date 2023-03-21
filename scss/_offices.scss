@@ -1,7 +1,7 @@
-main {
+.contact_main {
     margin-left: auto;
     margin-right: auto;
-    max-width: 940px;
+    max-width: 720px;
 }
 .small_nav {
     border-top: 1px solid #333645;
@@ -34,6 +34,77 @@ main {
     font-size: 2.25rem;
     font-weight: 400;
     @include centre_above;   
+}
+.office_cards_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.office_card {
+    max-width: 720px;
+    border-radius: 20px;
+    margin: 0 15px 30px 15px;
+}
+.office_card_top {
+    border: 1px solid #ccc;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+.office_img {
+    border-radius: 20px 20px 0 0;
+    width: auto;
+    width: 100%;
+    object-fit: cover;
+}
+.office_description {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.office_title {
+    color: #333645;
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.office_address {
+    list-style: none;
+    padding: 0;
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.office_number {
+    font-weight: 700;
+    font-size: 1.625rem;
+    text-decoration: none;
+    color: #926fb1;
+    &:hover {
+        text-decoration: underline;
+    }    
+}
+.office_btn {
+    max-width: fit-content;
+    background-color: #926fb1;
+    margin-top: 15px;
+    font-size: .9em !important;
+    @include small_btn;
+    &:hover {
+        background-color: #7e57a0;
+    }
+}
+.office_map {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    touch-action: pan-x pan-y;
+    border-radius: 0 0 20px 20px;
 }
 .info {
     padding: 0px 15px;
@@ -69,9 +140,16 @@ main {
     margin: 0 15px;
     border-radius: 10px;
     padding: 30px;
+    height: auto;
+    & .form-control {
+        margin-bottom: 0;
+    }
 }
 .Large_form label {
     margin-bottom: 5px;
+}
+.message-area {
+    height: auto !important;
 }
 .action-block {
     display: flex;
@@ -89,6 +167,12 @@ main {
         background-color: #7e57a0;
     }
 }
+.error {
+    color: #ff0033;
+}
+.success {
+    color: #4BB543;
+}
 .helper-text {
     font-size: 85%;
 }
@@ -101,9 +185,18 @@ main {
     }
 }
 @media screen and (min-width:992px) and (max-width:1260px) {
+    .contact_main {
+        max-width: 940px;
+    }
     .small_nav {
         display: block;
         border: none;
+    }
+    .nav_text {
+        max-width: 906.8px; 
+    }
+    .office_card {
+        max-width: 440px;
     }
     .input_group {
         display: flex;
@@ -118,9 +211,11 @@ main {
     .page_head {
         background-color: white;
         margin-top: 50px;
+        padding-top: 0;
     }
     .page_header {
-        color: #333645;   
+        color: #333645;
+        max-width: 906.8px;   
     }
 }
 @media screen and (min-width:1260px)  {
@@ -137,7 +232,11 @@ main {
     }
     .page_header {
         color: #333645;
-        max-width: 1170px;   
+        max-width: 1170px; 
+        padding-top: 0;  
+    }
+    .office_card {
+        max-width: 570px;
     }
     .input_group {
         display: flex;
@@ -157,7 +256,7 @@ main {
         flex-direction: row-reverse;
         
     }
-    main {
+    .contact_main {
         max-width: 1200px;
     }
 
