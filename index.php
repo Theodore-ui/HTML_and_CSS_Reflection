@@ -17,7 +17,7 @@
                 <p>This website uses cookies. Click OK to consent to cookies.</p>
                 <button class="cookie_btn">OK</button>
             </div>
-            <?php include('header.php')?>
+            <?php include('inc/header.php')?>
             <main>
                 <div class="slides">
                     <div class="slide">
@@ -350,7 +350,7 @@
                     </div>
                     <div class="latest_news_card_container">
                         <?php 
-                            include('functions.php');
+                            include('inc/functions.php');
                             display_news_items();
                         ?> 
                     </div>
@@ -408,9 +408,9 @@
                         </a>
                     </div> 
                 </div>
-                <?php include('newsletter.php') ?>  
+                <?php include('inc/newsletter.php') ?>  
             </main>
-            <?php include('footer.php') ?>
+            <?php include('inc/footer.php') ?>
         </div>
         <?php include('sideMenu.php') ?>
         <script src="JS/jquery-3.6.3.min.js"></script>

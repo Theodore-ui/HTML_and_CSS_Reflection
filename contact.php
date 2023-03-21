@@ -1,4 +1,4 @@
-<?php include('functions.php') ?>
+<?php include('inc/functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +14,7 @@
 <body>
     <div class="main_column">
         <div class="cover"></div>
-        <?php include('header.php') ?>
+        <?php include('inc/header.php') ?>
         <div class="small_nav">
             <p class="nav_text"><a href="index.php"><strong>Home</strong></a> / Our Offices</p>
         </div>
@@ -204,8 +204,8 @@
                 </form>
             </div>
         </main>
-        <?php include('newsletter.php') ?>
-        <?php include('footer.php') ?>
+        <?php include('inc/newsletter.php') ?>
+        <?php include('inc/footer.php') ?>
     </div>
     <?php include('sideMenu.php') ?>
     <script src="JS/jquery-3.6.3.min.js"></script>

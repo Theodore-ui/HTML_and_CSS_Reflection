@@ -2,7 +2,7 @@
     <div class="sidemenu_services_expanded">
         <div>
             <ul>
-                <li class=><a href="#" class="sidemenu_service_btn sidemenu_contact_btn">Contact Us</a></li>
+                <li class=><a href="contact.php" class="sidemenu_service_btn sidemenu_contact_btn">Contact Us</a></li>
             </ul>
         </div>
         <div class="sidemenu_service_item">

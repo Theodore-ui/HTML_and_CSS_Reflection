@@ -5,10 +5,10 @@
             <div class="name_email_container">
                 <div class="name_container">
                     <label class="required" for="user_name">Your Name</label>
-                    <input class="form-control" type="text" id="name" value="<?php if (isset($_POST['submit_newsletter_info']) && $is_errors) {echo $_POST["user_name"];} ?>" name="user_name">
+                    <input class="form-control" type="text" id="name" value="<?php if (isset($_POST['submit_newsletter_info']) && $is_errors_newsletter) {echo $_POST["user_name"];} ?>" name="user_name">
                     <?php 
-                    if(!empty($name_error)) {
-                        echo $name_error;
+                    if(!empty($user_name_error)) {
+                        echo $user_name_error;
                     } else {
                         echo "<br/><br/>";
                     }
@@ -16,10 +16,10 @@
                 </div>
                 <div class="email_container">
                     <label class="required" for="email">Your Email</label>
-                    <input class="form-control" type="email" id="email" value="<?php if (isset($_POST['submit_newsletter_info']) && $is_errors) {echo $_POST["user_email"];} ?>" name="user_email">
+                    <input class="form-control" type="email" id="email" value="<?php if (isset($_POST['submit_newsletter_info']) && $is_errors_newsletter) {echo $_POST["user_email"];} ?>" name="user_email">
                     <?php 
-                    if(!empty($email_error)) {
-                        echo $email_error;
+                    if(!empty($user_email_error)) {
+                        echo $user_email_error;
                     } else {
                         echo "<br/><br/>";
                     }

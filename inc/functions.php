@@ -106,8 +106,9 @@ if(isset($_POST['submit_info'])) {
 
     if (!$is_errors) {
         insert_contact_info($name, $company, $email, $telephone, $message, $subject); 
-        $success_message = "<p class='success'>Your infomation has been successfully logged</p>";
-         
+        $success_message = "<p class='success'>Your infomation has been successfully logged</p>";     
+    } else {
+        $success_message = "";
     } 
 } 
 
@@ -137,37 +138,39 @@ function insert_contact_info($name, $company, $email, $telephone, $message, $sub
 }
 
 if(isset($_POST['submit_newsletter_info'])) {
-    $name_error = "";
-    $email_error = "";
+    $user_name_error = "";
+    $user_email_error = "";
+    $success_message_newsletter = "";
 
-    $name = filter_input(INPUT_POST, 'user_name', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
+    $user_name = filter_input(INPUT_POST, 'user_name', FILTER_SANITIZE_STRING);
+    $user_email = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
 
-    $is_errors = false;
+    $is_errors_newsletter = false;
 
-    if (empty($name)) {
-        $name_error = "<p class='error'>Please enter your name!</p>";
-        $is_errors = true;
+    if (empty($user_name)) {
+        $user_name_error = "<p class='error'>Please enter your name!</p>";
+        $is_errors_newsletter = true;
     } else {
-        $name_error = "";    
+        $user_name_error = "";    
     }
     
-    if (empty($email)) {
-        $email_error = "<p class='error'>Please enter your email!</p>";
+    if (empty($user_email)) {
+        $user_email_error = "<p class='error'>Please enter your email!</p>";
         $is_errors = true;
-    } else if (!preg_match("/^[_.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+.)+[a-zA-Z]{2,6}$/i", $email)) {
-        $email_error = "<p class='error'>Please enter a valid email!</p>";
-        $is_errors = true;   
+    } else if (!preg_match("/^[_.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+.)+[a-zA-Z]{2,6}$/i", $user_email)) {
+        $user_email_error = "<p class='error'>Please enter a valid email!</p>";
+        $is_errors_newsletter = true;   
     }
 
-    if (!$is_errors) {
-        insert_newsletter_info($name, $email); 
-        $success_message_newsletter = "<p class='success'>Your infomation has been successfully logged</p>";
-         
+    if (!$is_errors_newsletter) {
+        insert_newsletter_info($user_name, $user_email); 
+        $success_message_newsletter = "<p class='success'>Your infomation has been successfully logged</p>";  
+    } else {
+        $success_message_newsletter = ""; 
     } 
 }
 
-function insert_newsletter_info($name, $email) {
+function insert_newsletter_info($user_name, $user_email) {
     include("connection.php");
 
     try {
@@ -175,8 +178,8 @@ function insert_newsletter_info($name, $email) {
             (name, email) 
             VALUES (?, ?)";
         $results = $db->prepare($sql);
-        $results->bindParam(1,$name,PDO::PARAM_STR);
-        $results->bindParam(2,$email,PDO::PARAM_STR);
+        $results->bindParam(1,$user_name,PDO::PARAM_STR);
+        $results->bindParam(2,$user_email,PDO::PARAM_STR);
         $results->execute();
     } catch (Exception $e) {
         echo $e->getMessage();
