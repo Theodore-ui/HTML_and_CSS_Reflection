@@ -108,9 +108,7 @@ if(isset($_POST['submit_info'])) {
         insert_contact_info($name, $company, $email, $telephone, $message, $subject); 
         $success_message = "<p class='success'>Your infomation has been successfully logged</p>";
          
-    } else {
-        
-    }
+    } 
 } 
 
 
@@ -129,6 +127,56 @@ function insert_contact_info($name, $company, $email, $telephone, $message, $sub
         $results->bindParam(4,$telephone,PDO::PARAM_INT);
         $results->bindParam(5,$subject,PDO::PARAM_STR);
         $results->bindParam(6,$message,PDO::PARAM_STR);
+        $results->execute();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+        echo "Query Failed";
+        return false;
+    }
+    
+}
+
+if(isset($_POST['submit_newsletter_info'])) {
+    $name_error = "";
+    $email_error = "";
+
+    $name = filter_input(INPUT_POST, 'user_name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
+
+    $is_errors = false;
+
+    if (empty($name)) {
+        $name_error = "<p class='error'>Please enter your name!</p>";
+        $is_errors = true;
+    } else {
+        $name_error = "";    
+    }
+    
+    if (empty($email)) {
+        $email_error = "<p class='error'>Please enter your email!</p>";
+        $is_errors = true;
+    } else if (!preg_match("/^[_.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+.)+[a-zA-Z]{2,6}$/i", $email)) {
+        $email_error = "<p class='error'>Please enter a valid email!</p>";
+        $is_errors = true;   
+    }
+
+    if (!$is_errors) {
+        insert_newsletter_info($name, $email); 
+        $success_message_newsletter = "<p class='success'>Your infomation has been successfully logged</p>";
+         
+    } 
+}
+
+function insert_newsletter_info($name, $email) {
+    include("connection.php");
+
+    try {
+        $sql = "INSERT INTO newsletter
+            (name, email) 
+            VALUES (?, ?)";
+        $results = $db->prepare($sql);
+        $results->bindParam(1,$name,PDO::PARAM_STR);
+        $results->bindParam(2,$email,PDO::PARAM_STR);
         $results->execute();
     } catch (Exception $e) {
         echo $e->getMessage();
