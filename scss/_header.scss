@@ -131,6 +131,7 @@ header .search_2 {
     @include btn;
     background-color: #999aa2;
     margin: 0 20px;
+    text-decoration: none;
     &:hover {
         background-color: #84858f;    
     }

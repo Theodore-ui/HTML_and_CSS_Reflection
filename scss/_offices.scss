@@ -1,0 +1,263 @@
+.contact_main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+.small_nav {
+    border-top: 1px solid #333645;
+    border-bottom: 1px solid #333645;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+    padding: 14px 15px;
+    display: none;
+}
+.nav_text {
+    color: #333645;
+    font-size: 0.9rem;
+    @include centre_above;   
+    
+}
+.nav_text a {
+    color: #333645;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.page_head {
+    background-color: #333645;
+    margin-bottom: 50px;
+    padding: 24px 15px;
+}
+.page_header {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 400;
+    @include centre_above;   
+}
+.office_cards_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.office_card {
+    max-width: 720px;
+    border-radius: 20px;
+    margin: 0 15px 30px 15px;
+}
+.office_card_top {
+    border: 1px solid #ccc;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+.office_img {
+    border-radius: 20px 20px 0 0;
+    width: auto;
+    width: 100%;
+    object-fit: cover;
+}
+.office_description {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.office_title {
+    color: #333645;
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.office_address {
+    list-style: none;
+    padding: 0;
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.office_number {
+    font-weight: 700;
+    font-size: 1.625rem;
+    text-decoration: none;
+    color: #926fb1;
+    &:hover {
+        text-decoration: underline;
+    }    
+}
+.office_btn {
+    max-width: fit-content;
+    background-color: #926fb1;
+    margin-top: 15px;
+    font-size: .9em !important;
+    @include small_btn;
+    &:hover {
+        background-color: #7e57a0;
+    }
+}
+.office_map {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    touch-action: pan-x pan-y;
+    border-radius: 0 0 20px 20px;
+}
+.info {
+    padding: 0px 15px;
+    & p {
+        line-height: 1.875rem;
+        margin: 0 0  25px 0;
+    }
+}
+.info .email {
+    color: #926fb1;
+    font-size: 1.625rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.support_dropper {
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+    & i {
+        margin-left: 6px;
+    }
+}
+.support_dropdown {
+    display: none;
+    max-width: 940px;
+}
+.Large_form {
+    margin: 0 15px;
+    border-radius: 10px;
+    padding: 30px;
+    height: auto;
+    & .form-control {
+        margin-bottom: 0;
+    }
+}
+.Large_form label {
+    margin-bottom: 5px;
+}
+.message-area {
+    height: auto !important;
+}
+.action-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-web {
+    color: #fff;
+    background-color: #926fb1;
+    @include small_btn;
+    height: auto;
+    border: none;
+    &:hover {
+        background-color: #7e57a0;
+    }
+}
+.error {
+    color: #ff0033;
+}
+.success {
+    color: #4BB543;
+}
+.helper-text {
+    font-size: 85%;
+}
+.text-danger {
+    color: red;
+}
+@media screen and (min-width:762px) and (max-width:992px) {
+    .small_nav {
+        display: block;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1260px) {
+    .contact_main {
+        max-width: 940px;
+    }
+    .small_nav {
+        display: block;
+        border: none;
+    }
+    .nav_text {
+        max-width: 906.8px; 
+    }
+    .office_card {
+        max-width: 440px;
+    }
+    .input_group {
+        display: flex;
+        flex-direction: row;
+        & .left_child {
+            padding-right: 30px;
+        }
+        & .form-group {
+            width: 100%;
+        }
+    }
+    .page_head {
+        background-color: white;
+        margin-top: 50px;
+        padding-top: 0;
+    }
+    .page_header {
+        color: #333645;
+        max-width: 906.8px;   
+    }
+}
+@media screen and (min-width:1260px)  {
+    .small_nav {
+        display: block;
+        border: none;
+    }
+    .nav_text {
+        max-width: 1170px;   
+    }
+    .page_head {
+        background-color: white;
+        margin-top: 50px;
+    }
+    .page_header {
+        color: #333645;
+        max-width: 1170px; 
+        padding-top: 0;  
+    }
+    .office_card {
+        max-width: 570px;
+    }
+    .input_group {
+        display: flex;
+        flex-direction: row;
+        & .left_child {
+            padding-right: 30px;
+        }
+        & .form-group {
+            width: 100%;
+        }
+    }
+    .info {
+        width: 370px;
+    }
+    .info_form {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .contact_main {
+        max-width: 1200px;
+    }
+
+}
