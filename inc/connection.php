@@ -10,4 +10,3 @@ try {
     exit;
 }
 
-//'localhost','root','','netmatters'
